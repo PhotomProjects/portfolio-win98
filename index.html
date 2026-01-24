@@ -3,17 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Win98-themed portfolio of Florian AUTHELIN: web projects, contact/appointment and resume.">
+    <link rel="icon" href="/assets/icons/win98-window-favicon.png">
+    <link rel="stylesheet" href="css/win98.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/main.js" defer></script>
     <title>Portfolio</title>
 </head>
 <body>
     <header>
         <h1 class="sr-only">Florian AUTHELIN - Portfolio</h1>
     </header>
+
     <main id="desktop">
-
+        <div class="desktop-icons">
+            <a href="#" title="Home" aria-label="Go to the main page">
+                <img src="/assets/icons/desktop/home.png" alt="" aria-hidden="true">
+                <p>Home</p>
+            </a>
+            <a href="#projects">
+                <img src="/assets/icons/desktop/projects.png" alt="Projects">
+                <p>Projects</p>
+            </a>
+            <a href="https://lab.authelinflorian.dev" target="_blank" title="Laboratory" aria-label="Go to my laboratory" rel="noopener noreferrer">
+                <img src="/assets/icons/desktop/lab.png" alt="" aria-hidden="true">
+                <p>Laboratory</p>
+            </a>
+            <a href="#contact">
+                <img src="/assets/icons/desktop/contact.png" alt="Contact">
+                <p>Contact</p>
+            </a>
+            <a href="https://calendar.app.google/XwiEn5YamGWjTNMV9" target="_blank" title="Appointment" aria-label="Book a call" rel="noopener noreferrer">
+                <img src="/assets/icons/desktop/appointment.png" alt="" aria-hidden="true">
+                <p>Appointment</p>
+            </a>
+            <a href="https://cv.authelinflorian.dev" target="_blank" title="Resume" aria-label="Check my resume" rel="noopener noreferrer">
+                <img src="/assets/icons/desktop/resume.png" alt="" aria-hidden="true">
+                <p>Resume</p>
+            </a>
+            <a href="#language-switcher">
+                <img src="/assets/icons/desktop/language-switcher.png" alt="Switch language">
+                <p>Language</p>
+            </a>
+        </div>
     </main>
-    <footer id="taskbar">
 
+    <footer id="taskbar">
+        <div id="win-startmenu" class="start-menu">
+            <button aria-label="Start menu" class="taskbar-btn">
+                <img src="/assets/icons/taskbar/windows-start.png" alt="" aria-hidden="true"><p>Start</p>
+            </button>
+        </div>
+        <div class="handler"></div>
+        <div class="help-area">
+            <button aria-label="Navigation" class="taskbar-btn">
+                <img src="/assets/icons/taskbar/help.png" alt="" aria-hidden="true">
+            </button>
+        </div>
+        <div class="handler"></div>
+        <div id="win-taskbarwindows" class="taskbar-windows"></div>
+        <div class="system-tray">
+            <ul>
+                <li>
+                    <button aria-label="Sound volume">
+                        <img src="/assets/icons/taskbar/sound-volume.png" alt="" aria-hidden="true">
+                    </button>
+                </li>
+                <li>
+                    <a href="https://github.com/PhotomProjects" target="_blank" aria-label="Visit my GitHub profile">
+                        <img src="/assets/icons/taskbar/github.png" alt="" aria-hidden="true">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/florianauthelin57/" target="_blank" aria-label="Visit my LinkedIn profile">
+                        <img src="/assets/icons/taskbar/linkedin.png" alt="" aria-hidden="true">
+                    </a>
+                </li>
+                <li>
+                    <div id="local-time">
+                        <p>9:10 PM</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

@@ -16,6 +16,9 @@ Thumbs.db
 *.rar
 *.7z
 
+# Folder files
+assets/sounds
+
 # Personal docs
 note.txt
 what-i-learned.md

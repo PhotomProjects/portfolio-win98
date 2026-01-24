@@ -1,3 +1,5 @@
 # Portfolio Win98
 
-## Coming soon
+## Stack
+
+HTML / CSS / JavaScript
