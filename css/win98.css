@@ -177,8 +177,8 @@ main#desktop {
 
 .window {
     width: 420px;
-    background-color: #C0C0C0;
-    border: 6px outset #C0C0C0;
+    background-color: #c0c0c0;
+    border: 6px outset #c0c0c0;
     z-index: 1;
 }
 
@@ -186,6 +186,49 @@ main#desktop {
     background-color: #ffffff;
     padding: 10px;
     border-top: 3px inset #c0c0c0;
+}
+
+.window-home .window-content .boot-screen {
+    background-color: #ffffff;
+    padding: 12px;
+    border: 2px inset #c0c0c0;
+}
+
+.window-home .window-content .boot-screen.booted {
+    display: none;
+}
+
+.window-home .window-content .boot-title {
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.window-home .window-content .boot-sub {
+    margin: 8px 0 0;
+    font-size: 12px;
+}
+
+.window-home .window-content .boot-progress {
+    height: 14px;
+    border: 2px inset #c0c0c0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.window-home .window-content .boot-bar {
+    height: 100%;
+    width: 40%;
+    background-color: #000080;
+    animation: boot-move 1s linear infinite;
+}
+
+@keyframes boot-move {
+    0%   { transform: translateX(-120%); }
+    100% { transform: translateX(260%); }
+}
+
+.home-content[hidden] {
+    display: none;
 }
 
 .window .window-content .screensaver {
