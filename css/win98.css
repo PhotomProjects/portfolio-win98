@@ -1,9 +1,15 @@
+/* Root */
+
+:root {
+    --taskbar-h: 40px;
+}
+
 /* Font */
 
 @font-face {
     font-family: MSW98UI;
-    src: url(/assets/fonts/MSW98UI-Regular.woff2) format("woff2"),
-         url(/assets/fonts/MSW98UI-Regular.woff) format("woff");
+    src: url("../assets/fonts/MSW98UI-Regular.woff2") format("woff2"),
+         url("../assets/fonts/MSW98UI-Regular.woff") format("woff");
     font-display: swap;
 }
 
@@ -12,14 +18,6 @@
 * {
     font-family: MSW98UI, "MS Sans Serif", sans-serif;
     box-sizing: border-box;
-}
-
-button {
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
 }
 
 html,
@@ -39,19 +37,31 @@ body {
     outline-offset: 2px;
 }
 
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Desktop */
 
 main#desktop {
+    position: relative;
+    height: calc(100vh - var(--taskbar-h));
+    overflow: hidden;
     background-color: #008080;
-    flex-grow: 1;
 }
 
 #desktop .desktop-icons {
+    position: absolute;
+    top: 10px;
+    left: 40px;
     display: flex;
     flex-direction: column;
-    align-items: start;
     gap: 20px;
-    margin: 10px 40px;
+    z-index: 10;
 }
 
 #desktop .desktop-icons img {
@@ -65,7 +75,7 @@ main#desktop {
 }
 
 #desktop .desktop-icons a {
-    width: 30px;
+    width: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,6 +113,7 @@ main#desktop {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 1000;
 }
 
 #taskbar div .taskbar-btn {
