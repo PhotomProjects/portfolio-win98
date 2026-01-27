@@ -1,3 +1,5 @@
+/* Boot system */
+
 document.addEventListener("DOMContentLoaded", () => {
     const boot = document.getElementById("boot-screen");
     const home = document.getElementById("home-content");
@@ -12,4 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         boot.classList.add("booted");
         home.hidden = false;
     },  BOOT_TIME);
+});
+
+/* Start Menu */
+
+document.getElementById("shutdown").addEventListener("click", () => {
+    location.reload();
 });
