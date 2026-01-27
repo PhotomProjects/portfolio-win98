@@ -51,18 +51,18 @@
             <div class="window window-home" id="win-home">
                 <div class="titlebar">
                     <div class="title">
-                        <img src="assets/icons/desktop/home.png" alt="">
+                        <img src="assets/icons/desktop/home.png" alt="" aria-hidden="true">
                         <span>Home</span>
                     </div>
                     <div class="controls">
                         <button aria-label="Minimize window">
-                            <img src="assets/icons/window/minimize.png" alt="">
+                            <img src="assets/icons/window/minimize.png" alt="" aria-hidden="true">
                         </button>
                         <button aria-label="Maximize window">
-                            <img src="assets/icons/window/maximize.png" alt="">
+                            <img src="assets/icons/window/maximize.png" alt="" aria-hidden="true">
                         </button>
                         <button aria-label="Close window">
-                            <img src="assets/icons/window/close.png" alt="">
+                            <img src="assets/icons/window/close.png" alt="" aria-hidden="true">
                         </button>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <div class="boot-progress" aria-hidden="true"><div class="boot-bar"></div></div>
                         <p class="boot-sub">Loading modules</p>
                     </div>
-                    <div class="home-content" id="home-content" hidden>
+                    <div class="home-content" id="home-content">
                         <div class="screensaver">
                             <div class="screensaver-frame scanlines">
                                 <div class="screensaver-grid"></div>
@@ -100,6 +100,39 @@
                     </div>
                 </div>
             </div>
+
+            <div class="window window-start-menu" id="win-start-menu">
+                <div class="start-menu-layout">
+                    <div class="start-menu-side">
+                        <span>AUTHELIN Florian</span>
+                    </div>
+                    <div class="start-menu-main">
+                        <button class="start-menu-item" aria-label="Home">
+                            <img src="assets/icons/desktop/home.png" alt="" aria-hidden="true">
+                            <span>Home</span>
+                        </button>
+                        <button class="start-menu-item" aria-label="Projects">
+                            <img src="assets/icons/desktop/projects.png" alt="" aria-hidden="true">
+                            <span>Projects</span>
+                        </button>
+                        <button class="start-menu-item" aria-label="Contact">
+                            <img src="assets/icons/desktop/contact.png" alt="" aria-hidden="true">
+                            <span>Contact</span>
+                        </button>
+                        <div class="separator"></div>
+                        <button class="start-menu-item" aria-label="Help">
+                            <img src="assets/icons/taskbar/help.png" alt="" aria-hidden="true">
+                            <span>Help</span>
+                        </button>
+                       <div class="separator"></div>
+                        <button id="shutdown" class="start-menu-item" aria-label="Shut Down">
+                            <img src="assets/icons/taskbar/shut-down.png" alt="" aria-hidden="true">
+                            <span>Shut Down</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
