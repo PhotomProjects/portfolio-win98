@@ -58,6 +58,12 @@ h3 {
     margin: 30px 0 10px 0;
 }
 
+h4 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
 .bounce {
     animation: bounce 2s ease infinite;
 } @keyframes bounce {
@@ -360,7 +366,7 @@ main#desktop {
 .window-home .window-content .home-content div:not(.screensaver, .screensaver-frame, .screensaver-grid) {
     background-color: #c0c0c0;
     box-shadow: 3px 3px 0 #ffffff, -3px -3px 0 #808080;
-    border: 6px inset #c0c0c0;
+    border: 3px inset #c0c0c0;
 }
 
 .window-contact {
@@ -398,9 +404,15 @@ main#desktop {
     border-color: #ffffff #000000 #000000 #ffffff;
 }
 
-.window-language-switcher {
+.window-projects {
     position: absolute;
     top: 10px;
+    left: 1410px;
+}
+
+.window-language-switcher {
+    position: absolute;
+    top: 500px;
     left: 1410px;
 }
 
@@ -411,6 +423,12 @@ main#desktop {
     padding-left: 0;
     justify-content: space-evenly;
     list-style-type: none;
+    background-color: #c0c0c0;
+    border: 3px inset #c0c0c0;
+}
+
+.window-language-switcher .window-content ul li p {
+    margin: 2px;
     text-align: center;
 }
 
@@ -419,6 +437,7 @@ main#desktop {
     height: 48px;
     border-radius: 10%;
     opacity: 70%;
+    margin-top: 5px;
     padding: 0;
     box-shadow: inset 3px 3px 0 #ffffff, inset -3px -3px 0 #808080;
 }
