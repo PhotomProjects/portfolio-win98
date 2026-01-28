@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Win98-themed portfolio of Florian AUTHELIN: web projects, contact/appointment and resume.">
     <link rel="icon" href="assets/icons/win98-window-favicon.png">
+    <script>
+        document.documentElement.classList.remove("no-js");
+    </script>
     <link rel="stylesheet" href="css/win98.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/nojs.css">
     <script src="js/main.js" defer></script>
     <title>Portfolio</title>
 </head>
@@ -16,12 +20,17 @@
     </header>
 
     <main id="desktop">
+    <noscript>
+        <div class="nojs-banner">
+        <p>JavaScript is disabled : simplidied version (naviguation by anchor).</p>
+        </div>
+    </noscript>
         <div class="desktop-icons">
-            <a href="#" title="Home" aria-label="Go to the main page">
+            <a href="#win-home" title="Home" aria-label="Go to the main page">
                 <img src="assets/icons/desktop/home.png" alt="" aria-hidden="true">
                 <p>Home</p>
             </a>
-            <a href="#projects">
+            <a href="#win-projects">
                 <img src="assets/icons/desktop/projects.png" alt="Projects">
                 <p>Projects</p>
             </a>
@@ -29,7 +38,7 @@
                 <img src="assets/icons/desktop/lab.png" alt="" aria-hidden="true">
                 <p>Laboratory</p>
             </a>
-            <a href="#contact">
+            <a href="#win-contact">
                 <img src="assets/icons/desktop/contact.png" alt="Contact">
                 <p>Contact</p>
             </a>
@@ -41,7 +50,7 @@
                 <img src="assets/icons/desktop/resume.png" alt="" aria-hidden="true">
                 <p>Resume</p>
             </a>
-            <a href="#language-switcher">
+            <a href="#win-language-switcher">
                 <img src="assets/icons/desktop/language-switcher.png" alt="Switch language">    
                 <p>Language</p>
             </a>
