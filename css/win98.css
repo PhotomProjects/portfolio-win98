@@ -398,6 +398,41 @@ main#desktop {
     border-color: #ffffff #000000 #000000 #ffffff;
 }
 
+.window-language-switcher {
+    position: absolute;
+    top: 10px;
+    left: 1410px;
+}
+
+.window-language-switcher .window-content ul {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    padding-left: 0;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-align: center;
+}
+
+.window-language-switcher .window-content ul li button {
+    width: 64px;
+    height: 48px;
+    border-radius: 10%;
+    opacity: 70%;
+    padding: 0;
+    box-shadow: inset 3px 3px 0 #ffffff, inset -3px -3px 0 #808080;
+}
+
+.window-language-switcher .window-content ul li button:hover {
+    opacity: 100%;
+}
+
+.window-language-switcher .window-content ul li button img {
+    width: 48px;
+    height: 24px;
+    opacity: 70%;
+}
+
 .window-start-menu {
     position: fixed;
     left: 0;
