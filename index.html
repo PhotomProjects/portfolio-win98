@@ -31,7 +31,7 @@
                 <p>Home</p>
             </a>
             <a href="#win-projects">
-                <img src="assets/icons/desktop/projects.png" alt="Projects">
+                <img src="assets/icons/desktop/projects.png" alt="" aria-hidden="true">
                 <p>Projects</p>
             </a>
             <a href="https://lab.authelinflorian.dev" target="_blank" title="Laboratory" aria-label="Go to my laboratory" rel="noopener noreferrer">
@@ -39,7 +39,7 @@
                 <p>Laboratory</p>
             </a>
             <a href="#win-contact">
-                <img src="assets/icons/desktop/contact.png" alt="Contact">
+                <img src="assets/icons/desktop/contact.png" alt="" aria-hidden="true">
                 <p>Contact</p>
             </a>
             <a href="https://calendar.app.google/XwiEn5YamGWjTNMV9" target="_blank" title="Appointment" aria-label="Book a call" rel="noopener noreferrer">
@@ -51,7 +51,7 @@
                 <p>Resume</p>
             </a>
             <a href="#win-language-switcher">
-                <img src="assets/icons/desktop/language-switcher.png" alt="Switch language">    
+                <img src="assets/icons/desktop/language-switcher.png" alt="" aria-hidden="true">    
                 <p>Language</p>
             </a>
         </div>
@@ -70,7 +70,7 @@
                         <button aria-label="Maximize window">
                             <img src="assets/icons/window/maximize.png" alt="" aria-hidden="true">
                         </button>
-                        <button aria-label="Close window">
+                        <button data-action="close" aria-label="Close window">
                             <img src="assets/icons/window/close.png" alt="" aria-hidden="true">
                         </button>
                     </div>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="window window-contact" id="win-contact">
+            <div class="window window-contact" id="win-contact" hidden>
                 <div class="titlebar">
                     <div class="title">
                         <img src="assets/icons/desktop/contact.png" alt="">
@@ -123,7 +123,7 @@
                         <button aria-label="Maximize window">
                             <img src="assets/icons/window/maximize.png" alt="">
                         </button>
-                        <button aria-label="Close window">
+                        <button data-action="close" aria-label="Close window">
                             <img src="assets/icons/window/close.png" alt="">
                         </button>
                     </div>
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="window window-projects" id="win-projects">
+            <div class="window window-projects" id="win-projects" hidden>
                 <div class="titlebar">
                     <div class="title">
                         <img src="assets/icons/desktop/projects.png" alt="">
@@ -164,7 +164,7 @@
                         <button aria-label="Maximize window">
                             <img src="assets/icons/window/maximize.png" alt="">
                         </button>
-                        <button aria-label="Close window">
+                        <button data-action="close" aria-label="Close window">
                             <img src="assets/icons/window/close.png" alt="">
                         </button>
                     </div>
@@ -187,7 +187,7 @@
                 </div>
             </div>
 
-            <div class="window window-language-switcher" id="win-language-switcher">
+            <div class="window window-language-switcher" id="win-language-switcher" hidden>
                 <div class="titlebar">
                     <div class="title">
                         <img src="assets/icons/desktop/language-switcher.png" alt="">
@@ -200,7 +200,7 @@
                         <button aria-label="Maximize window">
                             <img src="assets/icons/window/maximize.png" alt="">
                         </button>
-                        <button aria-label="Close window">
+                        <button data-action="close" aria-label="Close window">
                             <img src="assets/icons/window/close.png" alt="">
                         </button>
                     </div>
@@ -232,26 +232,26 @@
                 </div>
             </div>
 
-            <div class="window window-start-menu" id="win-start-menu">
+            <div class="window window-start-menu" id="win-start-menu" hidden>
                 <div class="start-menu-layout">
                     <div class="start-menu-side">
                         <span>AUTHELIN Florian</span>
                     </div>
                     <div class="start-menu-main">
-                        <button class="start-menu-item" aria-label="Home">
+                        <button class="start-menu-item" data-open="win-home" aria-label="Home">
                             <img src="assets/icons/desktop/home.png" alt="" aria-hidden="true">
                             <span>Home</span>
                         </button>
-                        <button class="start-menu-item" aria-label="Projects">
+                        <button class="start-menu-item" data-open="win-projects" aria-label="Projects">
                             <img src="assets/icons/desktop/projects.png" alt="" aria-hidden="true">
                             <span>Projects</span>
                         </button>
-                        <button class="start-menu-item" aria-label="Contact">
+                        <button class="start-menu-item" data-open="win-contact" aria-label="Contact">
                             <img src="assets/icons/desktop/contact.png" alt="" aria-hidden="true">
                             <span>Contact</span>
                         </button>
                         <div class="separator"></div>
-                        <button class="start-menu-item" aria-label="Help">
+                        <button class="start-menu-item" data-open="win-help-menu" aria-label="Help">
                             <img src="assets/icons/taskbar/help.png" alt="" aria-hidden="true">
                             <span>Help</span>
                         </button>
@@ -264,7 +264,7 @@
                 </div>
             </div>
 
-            <div class="window window-help-menu" id="win-help-menu">
+            <div class="window window-help-menu" id="win-help-menu" hidden>
                 <div class="titlebar">
                     <div class="title">
                         <img src="assets/icons/taskbar/help.png" alt="">
@@ -277,7 +277,7 @@
                         <button aria-label="Maximize window">
                             <img src="assets/icons/window/maximize.png" alt="">
                         </button>
-                        <button aria-label="Close window">
+                        <button data-action="close" aria-label="Close window">
                             <img src="assets/icons/window/close.png" alt="">
                         </button>
                     </div>
@@ -348,7 +348,13 @@
             </button>
         </div>
         <div class="handler"></div>
-        <div id="win-taskbarwindows" class="taskbar-windows"></div>
+        <div id="win-taskbarwindows" class="taskbar-windows">
+            <button hidden data-win="win-home"><img src="assets/icons/desktop/home.png" alt="">Home</button>
+            <button hidden data-win="win-projects"><img src="assets/icons/desktop/projects.png" alt="">Projects</button>
+            <button hidden data-win="win-contact"><img src="assets/icons/desktop/contact.png" alt="">Contact</button>
+            <button hidden data-win="win-language-switcher"><img src="assets/icons/desktop/language-switcher.png" alt="">Language</button>
+            <button hidden data-win="win-help-menu"><img src="assets/icons/taskbar/help.png" alt="">Help</button>
+        </div>
         <div class="system-tray">
             <ul>
                 <li>

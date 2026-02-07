@@ -79,6 +79,16 @@ h4 {
     box-shadow: 0 2px 0 #ffffff;
 }
 
+/* JS */
+
+.masked {
+    display: none;
+}
+
+.window.is-closed {
+    display: none;
+}
+
 /* Desktop */
 
 main#desktop {
@@ -187,10 +197,14 @@ main#desktop {
     background-color: #c0c0c0;
 }
 
+#window-frame .window .titlebar .controls button:nth-child(2) {
+    pointer-events: none;
+}
+
 #window-frame .window .titlebar .controls img {
     width: 12px;
     height: 12px;
-}  
+}
 
 .window {
     width: 420px;
@@ -624,7 +638,7 @@ main#desktop {
     border: 3px outset #c0c0c0;
     width: 2px;
     height: 25px;
-    margin: 0 10px;
+    margin: 0 5px;
     align-items: center;
     cursor: col-resize;
 }
@@ -637,6 +651,24 @@ main#desktop {
     flex: 1;
 }
 
+#taskbar div.taskbar-windows button {
+    background-color: #c0c0c0;
+    border-color: #cfcfcf #000000 #000000 #cfcfcf;
+    width: 150px;
+    height: 31px;
+    text-align: left;
+}
+
+#taskbar div.taskbar-windows button img {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 0 0;
+}
+
+#win-taskbarwindows button[aria-pressed="true"] {
+    border: 2px inset #c0c0c0;
+}
+
 #taskbar .system-tray {
     margin-left: auto;
 }
@@ -646,9 +678,9 @@ main#desktop {
     align-items: center;
     list-style-type: none;
     background-color: #c0c0c0;
-    border: 3px inset #c0c0c0;
+    border: 2px inset #c0c0c0;
     border-bottom-color: #cfcfcf;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 #taskbar .system-tray ul li > a {
