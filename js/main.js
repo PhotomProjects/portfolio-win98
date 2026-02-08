@@ -22,15 +22,15 @@ if (boot && home) {
 
 /* Desktop */
 
-document.querySelectorAll('.desktop-icons a[href^="#win-"]').forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const id = link.getAttribute("href").slice(1);
-    const win = document.getElementById(id);
-    if (!win) return;
-    win.hidden = false;
-    win.classList.remove("is-closed");
-  });
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-open]");
+  if (!btn) return;
+
+  const id = btn.dataset.open;
+  const win = document.getElementById(id);
+  if (!win) return;
+
+  win.hidden = false;
 });
 
 /* Window */

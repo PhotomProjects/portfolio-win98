@@ -98,37 +98,53 @@ main#desktop {
     background-color: #008080;
 }
 
-#desktop .desktop-icons {
+#desktop nav.desktop-icons {
     position: absolute;
     top: 10px;
     left: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     z-index: 10;
 }
 
-#desktop .desktop-icons img {
-    width: 48px;    
+#desktop nav.desktop-icons ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#desktop nav.desktop-icons .desktop-icon {
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font: inherit;
+    text-align: center;
+}
+
+#desktop nav.desktop-icons .desktop-icon img {
+    width: 48px;
     height: 48px;
     border: 2px dotted transparent;
 }
 
-#desktop .desktop-icons img:hover {
+#desktop nav.desktop-icons .desktop-icon:hover img {
     border: 2px dotted #505050;
 }
 
-#desktop .desktop-icons a {
-    width: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
+#desktop nav.desktop-icons .desktop-icon:focus-visible img {
+    border: 2px dotted #505050;
 }
 
-#desktop .desktop-icons a p {
-    margin: 6px 0;
-    text-align: center;
+#desktop nav.desktop-icons .desktop-icon span {
+    display: block;
+    line-height: 1.1;
 }
 
 /* Masked H1 */
