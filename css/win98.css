@@ -699,6 +699,21 @@ main#desktop {
     padding: 2px 10px 0 0;
 }
 
-#local-time p {
+#local-time span {
     margin: 0;
+}
+
+#local-time:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 0;
+  bottom: 120%;
+  background-color: #ffffe1;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 4px 6px;
+  font-size: 11px;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 #808080;
+  z-index: 2000;
 }

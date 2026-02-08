@@ -60,3 +60,7 @@ html.no-js .system-tray #local-time {
 html.no-js #taskbar {
   position: static; /* si ton taskbar est fixed en mode normal */
 }
+
+html.no-js #taskbar .system-tray ul li:first-child {
+    display: none !important; 
+}
