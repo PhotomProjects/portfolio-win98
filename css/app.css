@@ -1,0 +1,335 @@
+.window .window-content .screensaver {
+    display: flex;
+    justify-content: center;
+    background-color: #c0c0c0;
+    border: 3px inset #c0c0c0;
+    box-shadow: inset 3px 3px 0 #afafaf, inset -3px -3px 0 #cfcfcf;
+}
+
+.window .window-content .screensaver-frame {
+    position: relative;
+    width: 320px;
+    height: 180px;
+    overflow: hidden;
+    background-color: #ead1ec;
+    border: 3px inset #c0c0c0;
+    border-radius: 5px;
+    perspective: 300px;
+}
+
+.window .window-content .screensaver-frame p {
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 50px;
+}
+
+@keyframes gridMove {
+    from { background-position: 0 0; }
+    to   { background-position: 0 40px; }
+}
+
+.window .window-content .screensaver .screensaver-frame .screensaver-grid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    height: 200%;
+    pointer-events: none;
+    background-image:
+        linear-gradient(to right, rgba(24, 226, 233, 0.911) 1px, transparent 10px),
+        linear-gradient(to top,   rgba(24, 226, 233, 0.55) 1px, transparent 10px);
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    transform-origin: center bottom;
+    transform: rotateX(80deg);
+    animation: gridMove 0.3s linear infinite;
+    mask-image: linear-gradient(to top, transparent 0%, black 35%, black 100%);
+    filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.35));
+}
+
+@keyframes crtFlicker {
+    0%   { opacity: 0.18; }
+    30%  { opacity: 0.42; }
+    70%  { opacity: 0.38; }
+    100% { opacity: 0.22; }
+}
+
+.window .window-content .screensaver .screensaver-frame.scanlines::before,
+.window .window-content .screensaver .screensaver-frame.scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.window .window-content .screensaver .screensaver-frame.scanlines::before {
+    background: repeating-linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.22) 0px,
+        rgba(0, 0, 0, 0.22) 1px,
+        rgba(0, 0, 0, 0) 2px,
+        rgba(0, 0, 0, 0) 4px
+        );
+    opacity: 0.5;
+}
+
+.window .window-content .screensaver .screensaver-frame.scanlines::after {
+    background: linear-gradient(to bottom,
+        rgba(255,255,255,0.06),
+        rgba(0,0,0,0.12),
+        rgba(255,255,255,0.04)
+        );
+    opacity: 0.35;
+    animation: crtFlicker 2.4s infinite;
+}
+
+@keyframes scanMove {
+    to { transform: translateY(100%); }
+}
+
+.window .window-content .screensaver .screensaver-frame.scanlines .screensaver-scanbar {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9;
+    background: linear-gradient(to bottom,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.08) 45%,
+        rgba(255,255,255,0.22) 50%,
+        rgba(255,255,255,0.08) 55%,
+        rgba(255,255,255,0) 100%
+        );
+    transform: translateY(-100%);
+    animation: scanMove 3.2s linear infinite;
+    mix-blend-mode: screen;
+    opacity: 0.35;
+}
+
+.window-home {
+    position: absolute;
+    top: 10px;
+    left: 120px;   
+}
+
+.window-home .window-content .home-content div:not(.screensaver, .screensaver-frame, .screensaver-grid) {
+    background-color: #c0c0c0;
+    box-shadow: 3px 3px 0 #ffffff, -3px -3px 0 #808080;
+    border: 3px inset #c0c0c0;
+}
+
+.window-contact {
+    position: absolute;
+    top: 10px;
+    left: 980px;
+}
+
+.window-contact .window-content form {
+    display: flex;
+    flex-direction: column;
+    border: 3px inset #c0c0c0;
+    background-color: #ead1ec;
+}
+
+.window-contact .window-content form label {
+    margin: 10px 2px;
+}
+
+.window-contact .window-content form input {
+    width: 100%;
+    background-color: #c1d4e0;
+}
+
+.window-contact .window-content form p {
+    margin: 5px 0;
+}
+
+.window-contact .window-content textarea#message {
+    background-color: #c1d4e0;
+}
+
+.window-contact .window-content form button {
+    background-color: #c0c0c0;
+    border-color: #ffffff #000000 #000000 #ffffff;
+}
+
+.window-projects {
+    position: absolute;
+    top: 10px;
+    left: 1410px;
+}
+
+.window-language-switcher {
+    position: absolute;
+    top: 500px;
+    left: 1410px;
+}
+
+.window-language-switcher .window-content ul {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    padding-left: 0;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: #c0c0c0;
+    border: 3px inset #c0c0c0;
+}
+
+.window-language-switcher .window-content ul li p {
+    margin: 2px;
+    text-align: center;
+}
+
+.window-language-switcher .window-content ul li button {
+    width: 64px;
+    height: 48px;
+    border-radius: 10%;
+    opacity: 70%;
+    margin-top: 5px;
+    padding: 0;
+    box-shadow: inset 3px 3px 0 #ffffff, inset -3px -3px 0 #808080;
+}
+
+.window-language-switcher .window-content ul li button:hover {
+    opacity: 100%;
+}
+
+.window-language-switcher .window-content ul li button img {
+    width: 48px;
+    height: 24px;
+    opacity: 70%;
+}
+
+.window-start-menu {
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    width: 230px;
+    border-width: 3px;
+    border-color: #ffffff #000000 #000000 #ffffff;
+}
+
+.window-start-menu .start-menu-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.window-start-menu .start-menu-layout .start-menu-side {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(to bottom, #000080 70%, #0000FF 30%);
+    padding: 0 0 3px 3px;
+}
+
+.window-start-menu .start-menu-layout .start-menu-side span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.window-start-menu .start-menu-layout .start-menu-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.window-start-menu .start-menu-layout .start-menu-main .start-menu-item {
+    width: 100%;
+    background-color: #c0c0c0;
+    border: none;
+    padding: 9px 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.window-start-menu .start-menu-layout .start-menu-main .start-menu-item img {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+.window-start-menu .start-menu-layout .start-menu-main .start-menu-item:hover {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+.window-help-menu {
+    position: absolute;
+    top: 10px;
+    left: 550px;
+}
+
+.window-help-menu .window-content span {
+    display: block;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.window-help-menu .window-content table {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+}
+
+.window-help-menu .window-content table caption {
+    text-align: left;
+    text-decoration: underline;
+    padding: 5px;
+    background-color: #c0c0c0;
+    border: 1px solid #000000;
+    box-shadow: inset 3px 3px 0 #ffffff, inset -3px -3px 0 #808080;
+}
+
+.window-help-menu .window-content table tr:nth-child(even) {
+    background-color: #bebebe;
+}
+
+.window-help-menu .window-content table th,
+.window-help-menu .window-content table td {
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+.window-help-menu .window-content table th img {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto;
+}
+
+.window-help-menu .window-content table img {
+    width: 20px;
+    height: 20px;
+}
+
+.window-help-menu .window-content .clippy-float {
+    float: left;
+    margin-top: 10px;
+}
+
+.window-help-menu .window-content .clippy-float img {
+    width: 64px;
+    height: 64px;
+}
+
+.window-help-menu .window-content .clippy-float p {
+    margin-left: 70px;
+}
+
+.window-help-menu .window-content .clippy-float p img {
+    width: 16px;
+    height: 16px;
+}
+
+.window-help-menu .window-content .float-clear {
+    clear: both;
+}

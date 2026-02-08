@@ -54,11 +54,11 @@ html.no-js #taskbar .handler,
 html.no-js #taskbar .help-area,
 html.no-js #win-taskbarwindows,
 html.no-js .system-tray #local-time {
-  display: none !important;
+    display: none !important;
 }
 
 html.no-js #taskbar {
-  position: static; /* si ton taskbar est fixed en mode normal */
+    position: static;
 }
 
 html.no-js #taskbar .system-tray ul li:first-child {
