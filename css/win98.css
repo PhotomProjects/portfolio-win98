@@ -325,11 +325,7 @@ main#desktop {
 
 #taskbar .help-area {
     display: flex;
-}
-
-#taskbar .taskbar-windows {
-    flex: 1;
-}
+}       
 
 #taskbar div.taskbar-windows button {
     background-color: #c0c0c0;
@@ -392,4 +388,32 @@ main#desktop {
     white-space: nowrap;
     box-shadow: 2px 2px 0 #808080;
     z-index: 2000;
+}
+
+@media (max-width: 539px) {
+    #desktop div.window-tablet-alert {
+        display: none;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 992px) {
+    #desktop div.window-tablet-alert {
+        height: fit-content;
+    }
+
+    html.tablet-mode #window-frame .window:not(.window-start-menu) {
+        position: fixed;
+        top: 30px;
+        left: 130px;
+        right: 20px;
+        width: auto;
+        max-height: calc(100vh - 80px);    
+        overflow: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    #desktop div.window-tablet-alert {
+        display: none;
+    }
 }

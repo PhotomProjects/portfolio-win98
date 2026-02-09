@@ -22,15 +22,39 @@ if (boot && home) {
 
 /* Desktop */
 
+/* Tablet mode */
+
+const tabletMQ = window.matchMedia("(min-width: 540px) and (max-width: 992px)");
+
+document.documentElement.classList.toggle("tablet-mode", tabletMQ.matches);
+tabletMQ.addEventListener("change", (e) => {
+  document.documentElement.classList.toggle("tablet-mode", e.matches);
+});
+
 document.addEventListener("click", (e) => {
-  const btn = e.target.closest("button[data-open]");
-  if (!btn) return;
+  const openButton = e.target.closest("button[data-open]");
+  if (!openButton) return;
 
-  const id = btn.dataset.open;
-  const win = document.getElementById(id);
-  if (!win) return;
+  const targetWindowId = openButton.dataset.open;
+  if (!targetWindowId) return;
 
-  win.hidden = false;
+  const targetWindow = document.getElementById(targetWindowId);
+  if (!targetWindow) return;
+
+  if (tabletMQ.matches) {
+    const allWindows = document.querySelectorAll("#window-frame .window")
+    allWindows.forEach((currentWindow) => {
+      if (currentWindow.id === "win-start-menu") return;
+      
+      const isTargetWindow = currentWindow.id === targetWindowId;
+      if (!isTargetWindow) {
+        currentWindow.hidden = true;
+        currentWindow.classList.add("is-closed");
+      }
+    });
+  }
+  targetWindow.hidden = false;
+  targetWindow.classList.remove("is-closed");
 });
 
 /* Window */

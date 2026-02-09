@@ -227,19 +227,19 @@
                     <p>Please, choose a language.</p>
                     <ul>
                         <li>
-                            <button aria-label="Français">
+                            <button data-lang="fr" aria-label="Français">
                                  <img src="/assets/images/language-switcher-window/france.webp" alt="">
                             </button>
                             <p>FR</p>
                         </li>
                         <li>
-                            <button aria-label="English">
+                            <button data-lang="en" aria-label="English">
                                 <img src="/assets/images/language-switcher-window/united-states.webp" alt="">
                             </button>
                             <p>EN</p>
                         </li>
                         <li>
-                            <button aria-label="日本語">
+                            <button data-lang="ja" aria-label="日本語">
                                 <img src="/assets/images/language-switcher-window/japan.webp" alt="">
                             </button>
                             <p>JP</p>
@@ -348,6 +348,29 @@
                 </div>
             </div>
 
+            <div class="window window-tablet-alert" id="win-alert">
+                <div class="titlebar">
+                    <div class="title">
+                        <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                        <span>Alert</span>
+                    </div>
+                    <div class="controls">
+                        <button aria-label="Minimize window">
+                            <img src="/assets/icons/window/minimize.webp" alt="" aria-hidden="true">
+                        </button>
+                        <button aria-label="Maximize window">
+                            <img src="/assets/icons/window/maximize.webp" alt="" aria-hidden="true">
+                        </button>
+                        <button data-action="close" aria-label="Close window">
+                            <img src="/assets/icons/window/close.webp" alt="" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+                <h2>Alert: resolution not compatible</h2>
+                <div class="window-content">
+                    <p>You are viewing this webiste on a medium screen resolution. For a better experience, please use a larger apparel.</p>
+                    <p>To naviguate on this website, you need to close the current window to open a new one. You can't open two windows simultaneously.</p>
+                </div>
         </div>
     </main>
 
