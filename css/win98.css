@@ -20,6 +20,12 @@
     box-sizing: border-box;
 }
 
+:lang(ja) {
+    font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 html,
 body {
     min-height: 100vh;
@@ -312,6 +318,10 @@ main#desktop {
 #taskbar .start-menu button p {
     margin: 5px;
     font-weight: 700;
+}
+
+:lang(ja) #taskbar .start-menu button p {
+    margin: 0;
 }
 
 #taskbar .handler {
