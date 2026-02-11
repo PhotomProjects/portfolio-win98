@@ -109,7 +109,7 @@
 
 .window-home {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 120px;   
 }
 
@@ -121,7 +121,7 @@
 
 .window-contact {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 980px;
 }
 
@@ -156,7 +156,7 @@
 
 .window-projects {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 1410px;
 }
 
@@ -264,7 +264,7 @@
 
 .window-help-menu {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 550px;
 }
 
