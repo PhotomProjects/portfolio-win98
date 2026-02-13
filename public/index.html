@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/win98.css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/nojs.css">
+    <link rel="canonical" href="https://authelinflorian.dev/">
     <script src="/js/main.js" defer></script>
     <title>Florian AUTHELIN | Portfolio</title>
 </head>
@@ -80,13 +81,13 @@
                         <span data-i18n="span.winHomeTitleBar">Home</span>
                     </div>
                     <div class="controls">
-                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window">
+                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-home" disabled>
                             <img src="/assets/icons/window/minimize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window">
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-home" disabled>
                             <img src="/assets/icons/window/maximize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window">
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-home">
                             <img src="/assets/icons/window/close.webp" alt="">
                         </button>
                     </div>
@@ -139,13 +140,13 @@
                         <span data-i18n="span.winContactTitleBar">Contact</span>
                     </div>
                     <div class="controls">
-                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window">
+                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-contact" disabled>
                             <img src="/assets/icons/window/minimize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window">
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-contact" disabled>
                             <img src="/assets/icons/window/maximize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window">
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-contact">
                             <img src="/assets/icons/window/close.webp" alt="">
                         </button>
                     </div>
@@ -175,13 +176,13 @@
                         <span data-i18n="span.winProjectsTitleBar">Projects</span>
                     </div>
                     <div class="controls">
-                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window">
+                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-projects" disabled>
                             <img src="/assets/icons/window/minimize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window">
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-projects" disabled>
                             <img src="/assets/icons/window/maximize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window">
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-projects">
                             <img src="/assets/icons/window/close.webp" alt="">
                         </button>
                     </div>
@@ -211,13 +212,13 @@
                         <span data-i18n="span.winLanguageSwitcherTitleBar">Language</span>
                     </div>
                     <div class="controls">
-                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window">
+                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-language-switcher" disabled>
                             <img src="/assets/icons/window/minimize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window">
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-language-switcher" disabled>
                             <img src="/assets/icons/window/maximize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window">
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-language-switcher">
                             <img src="/assets/icons/window/close.webp" alt="">
                         </button>
                     </div>
@@ -255,20 +256,20 @@
                         <span data-i18n="span.florianAuthelin">AUTHELIN Florian</span>
                     </div>
                     <div class="start-menu-main">
-                        <button class="start-menu-item" type="button" data-open="win-home" data-i18n="btn.homeStartMenu" data-i18n-attr="aria-label" aria-label="Home">
+                        <button class="start-menu-item" type="button" data-open="win-home" data-i18n="btn.homeStartMenu" data-i18n-attr="aria-label" aria-label="Home" aria-controls="win-home">
                             <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
                             <span data-i18n="span.winHomeStartMenu">Home</span>
                         </button>
-                        <button class="start-menu-item" type="button" data-open="win-projects" data-i18n="btn.projectsStartMenu" data-i18n-attr="aria-label" aria-label="Projects">
+                        <button class="start-menu-item" type="button" data-open="win-projects" data-i18n="btn.projectsStartMenu" data-i18n-attr="aria-label" aria-label="Projects" aria-controls="win-projects">
                             <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true">
                             <span data-i18n="span.winProjectsStartMenu">Projects</span>
                         </button>
-                        <button class="start-menu-item" type="button" data-open="win-contact" data-i18n="btn.contactStartMenu" data-i18n-attr="aria-label" aria-label="Contact">
+                        <button class="start-menu-item" type="button" data-open="win-contact" data-i18n="btn.contactStartMenu" data-i18n-attr="aria-label" aria-label="Contact" aria-controls="win-contact">
                             <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true">
                             <span data-i18n="span.winContactStartMenu">Contact</span>
                         </button>
                         <div class="separator"></div>
-                        <button class="start-menu-item" type="button" data-open="win-help-menu" data-i18n="btn.helpStartMenu" data-i18n-attr="aria-label" aria-label="Help">
+                        <button class="start-menu-item" type="button" data-open="win-help-menu" data-i18n="btn.helpStartMenu" data-i18n-attr="aria-label" aria-label="Help" aria-controls="win-help-menu">
                             <img src="/assets/icons/taskbar/help.webp" alt="" aria-hidden="true">
                             <span data-i18n="span.winHelpStartMenu">Help</span>
                         </button>
@@ -288,13 +289,13 @@
                         <span data-i18n="span.winHelpTitleBar">Help</span>
                     </div>
                     <div class="controls">
-                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window">
+                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-help-menu" disabled>
                             <img src="/assets/icons/window/minimize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window">
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-help-menu" disabled>
                             <img src="/assets/icons/window/maximize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window">
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-help-menu">
                             <img src="/assets/icons/window/close.webp" alt="">
                         </button>
                     </div>
@@ -307,38 +308,63 @@
                     <caption data-i18n="caption.helpIcons">
                         Icons explanation:
                     </caption>
+                    <thead>
                         <tr>
-                            <th data-i18n="th.icons">Icons</th>
-                            <th data-i18n="th.explanation">Explanation</th>
+                            <th data-i18n="th.icons" scope="col">Icons</th>
+                            <th data-i18n="th.explanation" scope="col">Explanation</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
-                            <th><img src="/assets/icons/desktop/home.webp" alt=""></th>
+                            <th scope="row">
+                                <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="span.thHome">Desktop</span>
+                            </th>
                             <td data-i18n="td.homeIcon">This is the Home icon. It allows you to go back on the main page.</td>
                         </tr>
                         <tr>
-                            <th><img src="/assets/icons/desktop/projects.webp" alt=""></th>
+                            <th scope="row">
+                                <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="span.thProjects">Projects</span>
+                            </th>
                             <td data-i18n="td.projectsIcon">This is the Projects icon. It contains a presentation of all of my projects.</td>
                         </tr>
                         <tr>
-                            <th><img src="/assets/icons/desktop/lab.webp" alt=""></th>
+                            <th scope="row">
+                                <img src="/assets/icons/desktop/lab.webp" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="span.thLab">Laboratory</span>
+                            </th>
                             <td data-i18n="td.labIcon">This is the Laboratory icon. It redirects to my experiences with Three.js</td>
                         </tr>
                         <tr>
-                            <th><img src="/assets/icons/desktop/contact.webp" alt=""></th>
+                            <th scope="row">
+                                <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true">
+                                <span class=" sr-only" data-i18n="span.thContact">Contact</span>
+                            </th>
                             <td data-i18n="td.contactIcon">This is the Contact icon. It has a contact form that you can use to send a message to Mr. AUTHELIN Florian.</td>
                         </tr>
                         <tr>
-                            <th><img src="/assets/icons/desktop/appointment.webp" alt=""></th>
+                            <th scope="row">
+                                <img src="/assets/icons/desktop/appointment.webp" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="span.thAppointement">Appointment</span>
+                            </th>
                             <td data-i18n="td.appointmentIcon">This is the Appointment icon. It redirects to a Google Calendar to book a call with Mr. AUTHELIN Florian.</td>
                         </tr>
                         <tr>
-                            <th><img src="/assets/icons/desktop/resume.webp" alt=""></th>
+                            <th scope="row">
+                                <img src="/assets/icons/desktop/resume.webp" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="span.thResume">Resume</span>
+                            </th>
                             <td data-i18n="td.resumeIcon">This is the Resume icon. It redirects to the resume page of Mr. AUTHELIN Florian.</td>
                         </tr>
                         <tr>
-                            <th><img src="/assets/icons/desktop/language-switcher.webp" alt=""></th>
+                            <th scope="row">
+                                <img src="/assets/icons/desktop/language-switcher.webp" alt="" aria-hidden="true">
+                                <span class="sr-only" data-i18n="span.thLanguage">Language Switcher</span>
+                            </th>
                             <td data-i18n="td.languageIcon">This is the Language icon. You can switch between English, French and Japanese.</td>
                         </tr>
+                    </tbody>
                     </table>
                     <div class="clippy-float">
                         <img src="/assets/images/help-window/clippy.gif" alt="" class="clippy-float" data-i18n="img.clippyTitle" data-i18n-attr="title" title="Hello World!">
@@ -359,13 +385,13 @@
                         <span data-i18n="span.winAlertTitleBar">Alert</span>
                     </div>
                     <div class="controls">
-                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window">
+                            <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-alert" disabled>
                             <img src="/assets/icons/window/minimize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window">
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-alert" disabled>
                             <img src="/assets/icons/window/maximize.webp" alt="">
                         </button>
-                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window">
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-alert">
                             <img src="/assets/icons/window/close.webp" alt="">
                         </button>
                     </div>
@@ -381,14 +407,14 @@
 
     <nav id="taskbar" data-i18n="nav.taskbar" data-i18n-attr="aria-label" aria-label="Taskbar">
         <div id="win-startmenu" class="start-menu">
-            <button type="button" data-i18n="btn.taskbarStart" data-i18n-attr="aria-label" aria-label="Start menu" class="taskbar-btn">
+            <button type="button" data-i18n="btn.taskbarStart" data-i18n-attr="aria-label" aria-label="Start menu" aria-controls="win-start-menu" aria-expanded="false" class="taskbar-btn">
                 <img src="/assets/icons/taskbar/windows-start.webp" alt="" aria-hidden="true">
                 <p data-i18n="p.startMenuText">Start</p>
             </button>
         </div>
         <div class="handler"></div>
         <div class="help-area">
-            <button type="button" data-i18n="btn.taskbarHelp" data-i18n-attr="aria-label" aria-label="How to navigate" class="taskbar-btn">
+            <button type="button" data-i18n="btn.taskbarHelp" data-i18n-attr="aria-label" aria-label="How to navigate" aria-controls="win-help-menu" class="taskbar-btn">
                 <img src="/assets/icons/taskbar/help.webp" alt="" aria-hidden="true">
             </button>
         </div>
@@ -411,9 +437,9 @@
                     </a>
                 </li>
                 <li>
-                    <div id="local-time">
+                    <button id="local-time">
                         <span></span>
-                    </div>
+                    </button>
                 </li>
             </ul>
         </div>   

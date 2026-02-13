@@ -2,7 +2,7 @@
 
 /* i18n */
 
-/* Getting language (localStorage -> <html lang> -> browser -> "en" fallback) */
+/* Getting language (localStorage -> browser -> <html lang> -> "en" fallback) */
 let languageCode = localStorage.getItem("lang");
 if (!languageCode) languageCode = navigator.language;
 if (!languageCode) languageCode = document.documentElement.lang;
@@ -137,6 +137,7 @@ document.querySelectorAll(".window").forEach((win) => {
   closeBtn?.addEventListener("click", (e) => {
     e.stopPropagation();
     win.classList.add("is-closed");
+    win.hidden = true;
   });
 });
 
@@ -146,21 +147,49 @@ const startBtn = document.querySelector("#win-startmenu .taskbar-btn");
 const startMenu = document.getElementById("win-start-menu");
 const shutdown = document.getElementById("shutdown");
 
-startBtn?.addEventListener("click", () => {
-  startMenu.hidden = false;
-  startMenu.classList.toggle("masked");
+// Open / close Start
+startBtn?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (!startMenu) return;
+
+  startMenu.hidden = !startMenu.hidden;
+  const expanded = !startMenu.hidden;
+  startBtn.setAttribute("aria-expanded", String(expanded));
 });
 shutdown?.addEventListener("click", () => location.reload());
 
+// Outside click closes menu
+document.addEventListener("click", (e) => {
+  if (!startMenu || startMenu.hidden) return;
+  const target = e.target;
+  if (startBtn?.contains(target) || startMenu.contains(target)) return;
+  startMenu.hidden = true;
+  startBtn?.setAttribute("aria-expanded", "false");
+});
+
+// Esc closes menu
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  if (!startMenu || startMenu.hidden) return;
+  startMenu.hidden = true;
+  startBtn?.setAttribute("aria-expanded", "false");
+});
+
+// Click on item
 document.querySelectorAll("#win-start-menu .start-menu-item").forEach((item) => {
-  item.addEventListener("click", () => {
+  item.addEventListener("click", (e) => {
+    // Closes menu
+    if (startMenu) startMenu.hidden = true;
+    startBtn?.setAttribute("aria-expanded", "false");
+
+    // Item opens window
     const id = item.dataset.open;
+    if (!id) return;
     const win = document.getElementById(id);
     if (!win) return;
 
     win.hidden = false;
     win.classList.remove("is-closed");
-    startMenu?.classList.add("masked");
   });
 });
 
