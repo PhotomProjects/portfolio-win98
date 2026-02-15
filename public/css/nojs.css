@@ -21,31 +21,36 @@ html.no-js #window-frame {
 }
 
 html.no-js .window {
-    position: static !important;
-    display: block !important;
+    position: static;
+    display: block;
     width: min(960px, 100%);
     margin: 20px auto;
 }
 
 html.no-js #boot-screen {
-    display: none !important;
+    display: none;
 }
 
 html.no-js #home-content[hidden] {
-    display: block !important;
+    display: block;
 }
 
 html.no-js #win-start-menu {
-    display: none !important;
+    display: none;
 }
 
-html.no-js #desktop .desktop-icons {
+html.no-js main#desktop nav.desktop-icons {
     position: static;
+}
+
+html.no-js main#desktop nav.desktop-icons ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: 10px;
+    justify-content: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    margin: 10px auto;   
 }
 
 html.no-js .titlebar .controls,
@@ -54,7 +59,7 @@ html.no-js #taskbar .handler,
 html.no-js #taskbar .help-area,
 html.no-js #win-taskbarwindows,
 html.no-js .system-tray #local-time {
-    display: none !important;
+    display: none;
 }
 
 html.no-js #taskbar {
@@ -62,5 +67,76 @@ html.no-js #taskbar {
 }
 
 html.no-js #taskbar .system-tray ul li:first-child {
-    display: none !important; 
+    display: none; 
+}
+
+html.no-js .window-nojs-alert .window-content div.nojs-banner a img {
+    width: 32px;
+    margin: 10px;
+}
+
+@media (max-width: 539px) {
+    html.no-js main#desktop nav.desktop-icons {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window:not(.window-mobile) {
+        display: none;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 991px) {
+    html.no-js main#desktop #window-frame div.window.window-mobile {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window.window-language-switcher {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window.window-contact {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window.window-help-menu {
+        display: none;
+    }
+
+    html.no-js #desktop nav.desktop-icons .desktop-icon[data-open="win-contact"] {
+        display: none;
+    }
+
+    html.no-js #desktop nav.desktop-icons .desktop-icon[data-open="win-language-switcher"] {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    html.no-js main#desktop #window-frame div.window.window-tablet-alert {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window.window-mobile {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window.window-language-switcher {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window.window-contact {
+        display: none;
+    }
+
+    html.no-js main#desktop #window-frame div.window.window-help-menu {
+        display: none;
+    }
+
+    html.no-js #desktop nav.desktop-icons .desktop-icon[data-open="win-contact"] {
+        display: none;
+    }
+
+    html.no-js #desktop nav.desktop-icons .desktop-icon[data-open="win-language-switcher"] {
+        display: none;
+    }
 }

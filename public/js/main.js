@@ -1,3 +1,7 @@
+/* No-JS */
+
+document.documentElement.classList.remove("no-js");
+
 /* Lang */
 
 /* i18n */
@@ -97,7 +101,7 @@ if (boot && home) {
 
 /* Tablet mode */
 
-const tabletMQ = window.matchMedia("(min-width: 540px) and (max-width: 992px)");
+const tabletMQ = window.matchMedia("(min-width: 540px) and (max-width: 991px)");
 
 document.documentElement.classList.toggle("tablet-mode", tabletMQ.matches);
 tabletMQ.addEventListener("change", (e) => {
@@ -129,6 +133,18 @@ document.addEventListener("click", (e) => {
   targetWindow.hidden = false;
   targetWindow.classList.remove("is-closed");
 });
+
+/* Mobile mode */
+
+const mobileMQ = window.matchMedia("(max-width: 539px)");
+
+const syncMobileClose = () => {
+  const closeBtn = document.querySelector('#win-mobile [data-action="close"]');
+  if (closeBtn) closeBtn.disabled = mobileMQ.matches;
+};
+
+syncMobileClose();
+mobileMQ.addEventListener("change", syncMobileClose);
 
 /* Window */
 
@@ -200,6 +216,12 @@ const helpWin = document.getElementById("win-help-menu");
 
 document.addEventListener("DOMContentLoaded", () => {
   if (!helpWin) return;
+
+  if (tabletMQ.matches) {
+    helpWin.hidden = true;
+    helpWin.classList.add("is-closed");
+    return;
+  }
 
   const BOOT_TIME = 3100;
   const SHOW_DELAY = BOOT_TIME + 200;

@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Win98-themed portfolio of Florian AUTHELIN: web projects, contact/appointment and resume.">
     <link rel="icon" href="/assets/icons/win98-window-favicon.png">
-    <script>
-        document.documentElement.classList.remove("no-js");
-    </script>
     <link rel="stylesheet" href="/css/win98.css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/nojs.css">
@@ -74,6 +71,93 @@
     </nav>
 
         <div id="window-frame">
+            <div class="window window-mobile" id="win-mobile">
+                <div class="titlebar">
+                    <div class="title">
+                        <img src="/assets/icons/desktop/smartphone.webp" alt="" aria-hidden="true">
+                        <span data-i18n="span.winMobileTitleBar">Mobile</span>
+                    </div>
+                    <div class="controls">
+                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-mobile" disabled>
+                            <img src="/assets/icons/window/minimize.webp" alt="">
+                        </button>
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-mobile" disabled>
+                            <img src="/assets/icons/window/maximize.webp" alt="">
+                        </button>
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-mobile">
+                            <img src="/assets/icons/window/close.webp" alt="">
+                        </button>
+                    </div>
+                </div>
+                <h2 data-i18n="h2.mobileHeading">Mobile</h2>
+                <div class="window-content">
+                    <h3 data-i18n="h3.mobileHeading">Under construction</h3>
+                    <p data-i18n="p.messageWIP">The mobile version is still under development, please come back later!</p>
+                    <img src="/assets/icons/desktop/clippy-mobile.webp" alt="" aria-hidden="true">
+                </div>
+            </div>
+
+            <noscript>
+                <div class="window window-nojs-alert" id="win-nojs-alert">
+                    <div class="titlebar">
+                        <div class="title">
+                            <img src="/assets/icons/desktop/nojs.webp" alt="" aria-hidden="true">
+                            <span>Alert</span>
+                        </div>
+                        <div class="controls">
+                            <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-nojs-alert" disabled>
+                                <img src="/assets/icons/window/minimize.webp" alt="">
+                            </button>
+                            <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-nojs-alert" disabled>
+                                <img src="/assets/icons/window/maximize.webp" alt="">
+                            </button>
+                            <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-nojs-alert">
+                                <img src="/assets/icons/window/close.webp" alt="">
+                            </button>
+                        </div>
+                    </div>    
+                    <h2>JavaScript disabled</h2>
+                    <div class="window-content">
+                        <div class="nojs-banner">
+                            <p>This message is for the users who are visiting the website with JavaScript deactivated. To fully enjoy the experience, please activate JavaScript.</p>
+                            <p>Features like the taskbar, the hour system, the Start Menu, the language switcher, the help menu or the contact form are disabled, you can still contact me on GitHub or LinkedIn.</p>
+                            <a href="https://github.com/PhotomProjects"><img src="/assets/icons/taskbar/github.webp" alt="" aria-hidden="true"></a>
+                            <a href="https://www.linkedin.com/in/florianauthelin57/"><img src="/assets/icons/taskbar/linkedin.webp" alt="" aria-hidden="true"></a>
+                        </div>
+                    </div>
+                </div>
+            </noscript>
+
+            <div class="window window-tablet-alert" id="win-tablet-alert">
+                <div class="titlebar">
+                    <div class="title">
+                        <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                        <span data-i18n="span.winAlertTitleBar">Alert</span>
+                    </div>
+                    <div class="controls">
+                        <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-tablet-alert" disabled>
+                            <img src="/assets/icons/window/minimize.webp" alt="">
+                        </button>
+                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-tablet-alert" disabled>
+                            <img src="/assets/icons/window/maximize.webp" alt="">
+                        </button>
+                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-tablet-alert">
+                            <img src="/assets/icons/window/close.webp" alt="">
+                        </button>
+                    </div>
+                </div>
+                <h2 data-i18n="h2.alertHeading">Alert: resolution not compatible</h2>
+                <div class="window-content">
+                    <p data-i18n="p.alertTextTablet1">You're viewing this website on a medium-sized screen. For a better experience, please use a larger device.</p>
+                    <p data-i18n="p.alertTextTablet2">To navigate this website, please close the current window before opening another one. You can't open two windows at the same time.</p>
+                </div>
+                <noscript>
+                    <div class="nojs-banner">
+                    <p>This message above is for the users who are visiting the website with JavaScript activated.</p>
+                    </div>
+                </noscript>
+            </div>
+
             <div class="window window-home" id="win-home">
                 <div class="titlebar">
                     <div class="title">
@@ -113,11 +197,11 @@
                         <p data-i18n="p.homeTextIntro">My name is Florian AUTHELIN and this is my Win98 inspired portfolio.</p>
                         <p data-i18n="p.homeTextTutorial">To give you a quick explanation of how this works, there is a desktop in the background with different icons. Clicking an icon will open a window or redirect you to the corresponding page</p>
                         <p>
-                            <span data-i18n="span.homeTextHelp.before">I'll show only one time but you can always go back on this help menu by clicking on the little yellow interrogation mark situated</span>
+                            <span data-i18n="span.homeTextHelp.before">I'll show this only once, but you can always come back to this help menu by clicking the small yellow question mark located</span>
                             (<img src="/assets/icons/taskbar/help.webp" alt="" class="bounce">)
                             <span data-i18n="span.homeTextHelp.after">in the taskbar.</span>
                         </p>
-                        <p data-i18n="p.homeTextContact">If you wish to contact me, you can send me a message by clicking on the Contact icon on the desktop or in the start menu and submit a form. If you prefer to book a call, you can do so by clicking on the Appointment icon. It'll redirect you on a Google Calendar page.
+                        <p data-i18n="p.homeTextContact">If you wish to contact me, you can send me a message by clicking on the Contact icon on the desktop or in the start menu and fill out the form. If you prefer to book a call, you can do so by clicking on the Appointment icon. It'll redirect you to a Google Calendar page.
                         </p>
                         <h3 data-i18n="h3.releaseNote">Release Note</h3>
                         <div>
@@ -190,9 +274,9 @@
                 <h2 data-i18n="h2.projectsHeading">Projects</h2>
                 <div class="window-content projects-content">
                     <h3 data-i18n="h3.projectsHeading">Personal projects</h3>
-                    <p data-i18n="p.introProjects">This is a list of all my personal projects. By clicking on the screen, it will redirect you to the according page.</p>
+                    <p data-i18n="p.introProjects">This is a list of all my personal projects. By clicking on the screen, it will redirect you to the corresponding page.</p>
                     <h4 data-i18n="h4.titleProjects1">⋆｡°✩──────── Resume ────────✩°｡⋆</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://cv.authelinflorian.dev" target="_blank" rel="noopener noreferrer">
                     <div class="screensaver">
                         <div class="screensaver-frame scanlines">
                             <div class="screensaver-grid"></div>
@@ -303,7 +387,7 @@
                 <h2 data-i18n="h2.helpHeading">Welcome to Mr. AUTHELIN Florian's portfolio!</h2>
                 <div class="window-content">
                     <h3 data-i18n="h3.helpHeading">How to navigate on this website?</h3>
-                    <p data-i18n="p.helpAbout">This website aims to function like an Operating System, there will be feature like dragging, resizing, closing, minimizing or maximizing windows!</p>
+                    <p data-i18n="p.helpAbout">This website aims to function like an Operating System, there will be features like dragging, resizing, closing, minimizing, and maximizing windows!</p>
                     <table>
                     <caption data-i18n="caption.helpIcons">
                         Icons explanation:
@@ -334,7 +418,7 @@
                                 <img src="/assets/icons/desktop/lab.webp" alt="" aria-hidden="true">
                                 <span class="sr-only" data-i18n="span.thLab">Laboratory</span>
                             </th>
-                            <td data-i18n="td.labIcon">This is the Laboratory icon. It redirects to my experiences with Three.js</td>
+                            <td data-i18n="td.labIcon">This is the Laboratory icon. It redirects to my Three.js experiments</td>
                         </tr>
                         <tr>
                             <th scope="row">
@@ -346,7 +430,7 @@
                         <tr>
                             <th scope="row">
                                 <img src="/assets/icons/desktop/appointment.webp" alt="" aria-hidden="true">
-                                <span class="sr-only" data-i18n="span.thAppointement">Appointment</span>
+                                <span class="sr-only" data-i18n="span.thAppointment">Appointment</span>
                             </th>
                             <td data-i18n="td.appointmentIcon">This is the Appointment icon. It redirects to a Google Calendar to book a call with Mr. AUTHELIN Florian.</td>
                         </tr>
@@ -375,31 +459,6 @@
                         </p>
                     </div>
                     <div class="float-clear"></div>
-                </div>
-            </div>
-
-            <div class="window window-tablet-alert" id="win-alert">
-                <div class="titlebar">
-                    <div class="title">
-                        <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
-                        <span data-i18n="span.winAlertTitleBar">Alert</span>
-                    </div>
-                    <div class="controls">
-                            <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-alert" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
-                        </button>
-                        <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-alert" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
-                        </button>
-                        <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-alert">
-                            <img src="/assets/icons/window/close.webp" alt="">
-                        </button>
-                    </div>
-                </div>
-                <h2 data-i18n="h2.alertHeading">Alert: resolution not compatible</h2>
-                <div class="window-content">
-                    <p data-i18n="p.alertText1">You are viewing this webiste on a medium screen resolution. For a better experience, please use a larger apparel.</p>
-                    <p data-i18n="p.alertText2">To naviguate on this website, you need to close the current window to open a new one. You can't open two windows simultaneously.</p>
                 </div>
             </div>
         </div>
@@ -437,7 +496,7 @@
                     </a>
                 </li>
                 <li>
-                    <button id="local-time">
+                    <button id="local-time" data-i18n="btn.localTime" data-i18n-attr="aria-label">
                         <span></span>
                     </button>
                 </li>

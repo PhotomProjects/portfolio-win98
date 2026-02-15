@@ -107,22 +107,10 @@
     opacity: 0.35;
 }
 
-.window-home {
-    position: absolute;
-    top: 5px;
-    left: 120px;   
-}
-
 .window-home .window-content .home-content div:not(.screensaver, .screensaver-frame, .screensaver-grid) {
     background-color: #c0c0c0;
     box-shadow: 3px 3px 0 #ffffff, -3px -3px 0 #808080;
     border: 3px inset #c0c0c0;
-}
-
-.window-contact {
-    position: absolute;
-    top: 5px;
-    left: 980px;
 }
 
 .window-contact .window-content form {
@@ -152,18 +140,6 @@
 .window-contact .window-content form button {
     background-color: #c0c0c0;
     border-color: #ffffff #000000 #000000 #ffffff;
-}
-
-.window-projects {
-    position: absolute;
-    top: 5px;
-    left: 1410px;
-}
-
-.window-language-switcher {
-    position: absolute;
-    top: 500px;
-    left: 1410px;
 }
 
 .window-language-switcher .window-content ul {
@@ -262,12 +238,6 @@
     color: #ffffff;
 }
 
-.window-help-menu {
-    position: absolute;
-    top: 5px;
-    left: 550px;
-}
-
 .window-help-menu .window-content span {
     display: block;
     margin: 10px 0;
@@ -332,4 +302,104 @@
 
 .window-help-menu .window-content .float-clear {
     clear: both;
+}
+
+@media (max-width: 539px) {
+    :root {
+        --taskbar-h: 0px;
+    }
+
+    #desktop div.window.window-mobile {
+        position: fixed;
+        inset: 0;
+        width: auto;
+        height: auto;
+    }
+
+    #desktop div.window.window-mobile .window-content {
+        text-align: center;
+    }
+
+    #desktop div.window.window-mobile .window-content img {
+        width: 128px;
+        height: auto;
+        margin-top: 32px;
+    }
+
+    main#desktop #window-frame div.window.window-nojs-alert {
+        display: none;
+    }
+
+    main#desktop #window-frame div.window.window-home {
+        display: none;
+    }
+
+    main#desktop #window-frame div.window.window-help-menu {
+        display: none;
+    }
+
+    main#desktop #window-frame div.window.window-projects {
+        display: none;
+    }
+    
+    main#desktop #window-frame div.window.window-contact {
+        display: none;
+    }
+    
+    main#desktop #window-frame div.window.window-language-switcher {
+        display: none;
+    }
+
+    main#desktop #window-frame div.window.window-tablet-alert {
+        display: none;
+    }
+
+    #taskbar {
+        display: none;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 991px) {
+    main#desktop #window-frame div.window.window-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    main#desktop #window-frame div.window.window-tablet-alert {
+        display: none;
+    }
+
+    main#desktop #window-frame div.window.window-mobile {
+        display: none;
+    }
+
+    .window-home { 
+        position: absolute; 
+        top: 5px; left: 120px; 
+    }
+
+    .window-contact { 
+        position: absolute; 
+        top: 5px; 
+        left: 980px; 
+    }
+
+    .window-help-menu { 
+        position: absolute; 
+        top: 5px; 
+        left: 550px; 
+    }
+    
+    .window-projects {
+        position: absolute;
+        top: 5px;
+        left: 1410px;
+    }
+
+    .window-language-switcher {
+        position: absolute;
+        top: 500px;
+        left: 1410px;
+}
 }
