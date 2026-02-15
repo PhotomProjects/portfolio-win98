@@ -1,7 +1,3 @@
-/* No-JS */
-
-document.documentElement.classList.remove("no-js");
-
 /* Lang */
 
 /* i18n */
