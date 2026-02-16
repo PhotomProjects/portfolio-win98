@@ -24,6 +24,7 @@
     "h2.homeHeading": "ホーム",
     "p.bootTitle": "PortfolioOS を起動しています…",
     "p.loadingModules": "モジュールを読み込み中",
+    "p.homeDisclaimer": "免責事項： 本サイトは、開発スキルを紹介することを目的とした個人ポートフォリオです。商用目的ではありません。知的財産権に関するお問い合わせ、またはその他のご連絡は、GitHub／LinkedIn／メールにてお願いいたします。",
     "h3.homeHeading": "おかえりなさい！",
     "p.homeTextIntro": "Florian AUTHELIN と申します。こちらは Windows 98 風のポートフォリオです。",
     "p.homeTextTutorial": "簡単な使い方：背景にあるデスクトップのアイコンをクリックすると、ウィンドウが開くか、該当ページへ移動します。",

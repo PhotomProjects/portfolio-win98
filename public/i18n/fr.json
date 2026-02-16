@@ -24,6 +24,7 @@
     "h2.homeHeading": "Accueil",
     "p.bootTitle": "Démarrage de PortfolioOS...",
     "p.loadingModules": "Chargement des modules",
+    "p.homeDisclaimer": "Avertissement : Ce site est un portfolio personnel réalisé uniquement pour présenter mes compétences en développement. Il n'a aucune vocation commerciale. Pour toute question ou demande concernant la propriété intellectuelle ou tout autre sujet, vous pouvez me contacter via GitHub, LinkedIn ou par e-mail.",
     "h3.homeHeading": "Bon retour !",
     "p.homeTextIntro": "Je m'appelle Florian AUTHELIN et voici mon portfolio inspiré de Windows 98.",
     "p.homeTextTutorial": "Pour vous expliquer comment cela fonctionne, en arrière-plan de cette fenêtre se trouve un bureau avec différentes icônes vous permettant d'ouvrir la fenêtre correspondante en cliquant dessus. Certaines icônes sont des liens redirigeant vers d'autres sites.",
