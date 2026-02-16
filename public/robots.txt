@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://authelinflorian.dev/sitemap.xml
