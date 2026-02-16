@@ -18,6 +18,15 @@ else languageCode = "en";
 /* Applying language to HTML (useful for accessibility and getLocale) */
 document.documentElement.lang = languageCode;
 
+const cvBase = "https://cv.authelinflorian.dev";
+const cvUrl =
+  languageCode === "fr" ? `${cvBase}/lang/fr/` :
+  languageCode === "ja" ? `${cvBase}/lang/jp/` :
+  `${cvBase}/`;
+
+const cvLink = document.querySelector("#open-cv");
+if (cvLink) cvLink.href = cvUrl;
+
 /* Loading matching JSON file */
 const translationFileUrl = `/i18n/${languageCode}.json`;
 
