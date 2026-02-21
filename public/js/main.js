@@ -24,8 +24,9 @@ const cvUrl =
   languageCode === "ja" ? `${cvBase}/lang/jp/` :
   `${cvBase}/`;
 
-const cvLink = document.querySelector("#open-cv");
-if (cvLink) cvLink.href = cvUrl;
+const cvLink = document.querySelectorAll("a.open-cv").forEach((link) => {
+  link.href = cvUrl;
+});
 
 /* Loading matching JSON file */
 const translationFileUrl = `/i18n/${languageCode}.json`;
