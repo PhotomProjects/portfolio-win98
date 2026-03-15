@@ -1,5 +1,5 @@
 const desktopArea = document.getElementById("window-frame"); // the coordinate system in which left/top should be expressed
-const windowElements = document.querySelectorAll(".window");
+const windowElements = desktopArea.querySelectorAll(".window[data-draggable='true']");
 
 windowElements.forEach((windowElement) => {
     makeWindowDraggable(windowElement, desktopArea);
