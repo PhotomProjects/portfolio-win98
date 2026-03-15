@@ -200,7 +200,10 @@ main#desktop {
     justify-content: space-between;
     padding: 0 6px;
     background: linear-gradient(to right,#000080, #067DCB);
-    color: #ffffff
+    color: #ffffff;
+    touch-action: none; /* if .titlebar doesn't have `touch-action: none`, on touchscreens they might get scrolling/zooming instead of dragging. */
+    user-select: none; /* disable the control of selection */
+    cursor: move;
 }
 
 #window-frame .window .titlebar .title {
@@ -238,6 +241,7 @@ main#desktop {
 }
 
 .window {
+    position: absolute;
     width: 420px;
     background-color: #c0c0c0;
     border: 6px outset #c0c0c0;

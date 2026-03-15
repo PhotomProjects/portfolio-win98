@@ -1,5 +1,6 @@
 import { initHelp, toggleHelpMenu } from "./apps/help.js";
 import { bootStart } from "./apps/home.js";
+import { makeWindowDraggable } from "./core/drag.js";
 import { setLanguage, resumeURL, translationJSON, languageBtn } from "./core/i18n.js";
 import { tabletMQ, initTabletModeClass, disabledCloseBtn } from "./core/responsive.js";
 import { toggleStartMenu, closeOnOutsideClick, closeOnEscKey, itemStartMenu, localTime } from "./core/taskbar.js";
@@ -48,4 +49,8 @@ toggleHelpMenu();
 
 /* Local time */
 
-localTime()
+localTime();
+
+/* Drag */
+
+makeWindowDraggable();

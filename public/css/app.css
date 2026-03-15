@@ -374,32 +374,28 @@
         display: none;
     }
 
-    .window-home { 
-        position: absolute; 
-        top: 5px; left: 120px; 
-    }
-
-    .window-contact { 
-        position: absolute; 
+    .window-home {  
         top: 5px; 
-        left: 980px; 
+        left: 120px; 
     }
 
-    .window-help-menu { 
-        position: absolute; 
+    .window-contact {  
+        top: 200px; 
+        left: 120px; 
+    }
+
+    .window-help-menu {  
         top: 5px; 
         left: 550px; 
     }
     
     .window-projects {
-        position: absolute;
-        top: 5px;
-        left: 1410px;
+        top: 300px;
+        left: 120px;
     }
 
     .window-language-switcher {
-        position: absolute;
         top: 500px;
-        left: 1410px;
+        left: 120px;
 }
 }
