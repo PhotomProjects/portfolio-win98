@@ -63,6 +63,8 @@ export function makeWindowDraggable(windowElement, desktopArea) {
         if (event.pointerType === "mouse" && event.button !== 0) return;
         // if the event originates from a mouse (pointerType === "mouse") and if the pressed button is not the left button (button !== 0) then the event is ignored (return)
 
+        if (event.target.closest(".controls")) return;
+
         const windowRect = windowElement.getBoundingClientRect();
         /* snapshot of the window (win-home, win-projects ect) in the viewport coordinate system
         this creates a rectangle with: left/top: position of the top-left corner in the viewport and width/height: displayed size
