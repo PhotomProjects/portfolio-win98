@@ -114,7 +114,7 @@ main#desktop {
     position: absolute;
     top: 10px;
     left: 40px;
-    z-index: 10;
+    z-index: 1;
 }
 
 #desktop nav.desktop-icons ul {
@@ -178,7 +178,7 @@ main#desktop {
 #window-frame {
     position: absolute;
     inset: 0;
-    z-index: 20;
+    z-index: 2;
     pointer-events: none;
 }
 
@@ -245,7 +245,6 @@ main#desktop {
     width: 420px;
     background-color: #c0c0c0;
     border: 6px outset #c0c0c0;
-    z-index: 1;
 }
 
 .window .window-content {

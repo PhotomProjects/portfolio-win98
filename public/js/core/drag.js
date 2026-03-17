@@ -1,5 +1,16 @@
 const desktopArea = document.getElementById("window-frame"); // the coordinate system in which left/top should be expressed
+if (!desktopArea) {
+  throw new Error("#window-frame not found");
+}
+/*
+fail fast logic
+    without desktopArea, the module is meaningless
+    continuing silently masks an HTML integration error
+    we want to fail fast, not miss the bug
+*/
 const windowElements = desktopArea.querySelectorAll(".window[data-draggable='true']");
+
+let topZIndex = 1;
 
 windowElements.forEach((windowElement) => {
     makeWindowDraggable(windowElement, desktopArea);
@@ -11,6 +22,18 @@ windowElements.forEach((windowElement) => {
     we also pass desktopArea (#window-frame) to calculate the relative positions
 */
 
+export function bringToFront(windowElement) {
+    topZIndex += 1;
+    /* just increments a counter, new z - index = old topZIndex + 1, based off the number of clicks in onDragStart function
+    initial value = topZIndex = 1
+    first call (click on a titlebar) -> topZIndex += 1
+    it becomes topZIndex = 2 so the window recieve windowElement.style.zIndex = 2
+    second call -> topZIndex = 3
+    ect
+    */
+    windowElement.style.zIndex = String(topZIndex);
+}
+
 export function makeWindowDraggable(windowElement, desktopArea) {
     const dragHandle = windowElement.querySelector(".titlebar");
     if (!dragHandle) return;
@@ -20,7 +43,18 @@ export function makeWindowDraggable(windowElement, desktopArea) {
     let grabOffsetY = 0; 
     // grabOffset = the distance between the pointer and the top-left corner of the window at the moment we grab it (otherwise the window "snap")
 
+    windowElement.addEventListener("pointerdown", onFocus);
     dragHandle.addEventListener("pointerdown", onDragStart);
+
+    function onFocus(event) {
+        if (!event.isPrimary) return;
+        if (event.pointerType === "mouse" && event.button !== 0) return;
+        
+        bringToFront(windowElement);
+        /* call the z-index function, this call occurs on every valid pointerdown on the title bar (click on titlebar -> onDragStart() -> bringToFront() -> topZIndex++)
+        this needs to be done at the beginning, so in onDragStart or in a focus/click handler because otherwise if put bringToFront(windowElement) inside onDragMove, The z-index would increase throughout the entire movement therefore, dozens/hundreds of unnecessary increments
+        */
+    }
 
     function onDragStart(event) { // onDragStart(event) — start the drag (pointerdown)
         if (!event.isPrimary) return;

@@ -1,3 +1,5 @@
+import { bringToFront } from "./drag.js";
+
 /* Desktop icons */
 
 export function deskIconsWindow({tabletMQ}) {
@@ -25,6 +27,8 @@ export function deskIconsWindow({tabletMQ}) {
         }
         targetWindow.hidden = false;
         targetWindow.classList.remove("is-closed");
+
+        bringToFront(targetWindow);
     });
 }
 
