@@ -193,14 +193,26 @@ Cloudflare Pages files:
 
 ---
 
+## <ins>Known Issues</ins>
+
+- fix mobile media query when using landscape mode
+
+---
+
 ## <ins>Roadmap</ins>
 
-- [ ] Window drag (titlebar styling is ready, JS to be implemented)
-- [ ] Window “state” persistence (positions/open windows)
+- [ ] Window true “state” persistence (positions/open windows)
+
+      (the DOM already stores the current visual state, but it is not yet an explicit state model)
+
 - [ ] Minimize / maximize behavior
 - [ ] Proper taskbar “open apps” area (like Win98)
 - [ ] Replace `mailto:` form with a serverless endpoint (Cloudflare Workers)
 - [ ] `prefers-reduced-motion` support
+- [ ] lazy load
+- [ ] start / shutdown sound effect
+- [ ] shutting down animation
+- [ ] add music
 
 ---
 
@@ -212,6 +224,12 @@ I used AI as an assistant to:
 - help me understand new concepts
 
 I still remained the actor of my project, keeping full control over decisions and code.
+
+---
+
+## <ins>FAQ</ins>
+
+### Host
 
 ---
 
