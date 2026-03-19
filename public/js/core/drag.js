@@ -142,14 +142,81 @@ export function makeWindowDraggable(windowElement, desktopArea) {
         
         const desktopRect = desktopArea.getBoundingClientRect();
 
-        const pointerXInDesktop = event.clientX - desktopRect.left;
-        const pointerYInDesktop = event.clientY - desktopRect.top;
+        const pointerXInDesktop = event.clientX - desktopRect.left - desktopArea.clientLeft;
+        const pointerYInDesktop = event.clientY - desktopRect.top - desktopArea.clientTop;
 
         const newLeft = pointerXInDesktop - grabOffsetX;
         const newTop = pointerYInDesktop - grabOffsetY;
 
-        windowElement.style.left = `${newLeft}px`;
-        windowElement.style.top = `${newTop}px`;
+        const maxLeft = desktopArea.clientWidth - windowElement.offsetWidth;
+        const maxTop = desktopArea.clientHeight - windowElement.offsetHeight;
+
+        const clampedLeft = Math.max(0, Math.min(newLeft, maxLeft));
+        const clampedTop = Math.max(0, Math.min(newTop, maxTop));
+
+        /* A clamp is used to force a value to remain within a range.
+        Formula: value = Math.max(min, Math.min(value, max))
+        It can be read as:
+            take the smaller of the two values: value and max.
+            then make sure that this result is not smaller than min.
+        
+        Math.max(min, ...): “if the result is less than min, replace it with min.”
+        Examples:
+            Math.max(0, 50) → 50
+            Math.max(0, -20) → 0
+        here, we cut off anything that goes too low.
+
+        Math.min(value, max): “if the value exceeds max, replace it with max.”
+        Examples:
+            Math.min(50, 100) → 50
+            Math.min(120, 100) → 100
+        here, we cut off everything that sticks out at the top.
+
+        If we combine: Math.max(min, Math.min(valeur, max)), there's 3 cases:
+        Case 1 — value in the interval
+        Math.max(0, Math.min(40, 100))
+        = Math.max(0, 40)
+        = 40
+        The value remains unchanged.
+
+        Case 2 — value too high
+        Math.max(0, Math.min(140, 100))
+        = Math.max(0, 100)
+        = 100
+        The value is capped at max.
+
+        Case 3 — value too small
+        Math.max(0, Math.min(-30, 100))
+        = Math.max(0, -30)
+        = 0
+        The value has risen to min.
+
+        For clampedLeft, this means:
+            if newLeft < 0 → set it to 0
+            if newLeft > maxLeft → set it to maxLeft
+            otherwise → keep newLeft
+        Therefore, the window cannot:
+            open to the left
+            open to the right
+        Same logic for top:
+            cannot open to the top
+            cannot open to the bottom
+
+        Order is important
+        Math.max(min, Math.min(valeur, max))
+            we first limit the function from above using Math.min
+            then we limit it from below using Math.max
+        JavaScript first evaluates the most nested call, so: Math.min(value, max)
+            then it passes that result to: Math.max(min, result)
+        As in mathematics, what's inside is evaluated before what's outside.
+        Here, it's not a "mathematical parenthesis" in the sense of a classical expression, but a nested function call.
+        The principle remains the same:
+            first, the inner argument is calculated
+            then, the outer function is calculated
+        */
+
+        windowElement.style.left = `${clampedLeft}px`;
+        windowElement.style.top = `${clampedTop}px`;
         /* ${} is a JavaScript template string (interpolated string)
         it allows to insert the value of a variable/expression into a string
         newLeft and newTop are calculated numbers (target position, in pixels, within the `offsetParent` coordinate system) - float numbers
