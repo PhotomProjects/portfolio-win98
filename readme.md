@@ -75,7 +75,49 @@ Code is split into small modules:
 
 **Why this stack?**
 
-I used a vanilla stack to strengthen my coding skills and knowledge before moving to frameworks.
+This project started on purpose with a vanilla stack to strengthen my understanding of HTML, CSS, JavaScript, DOM logic, accessibility, and UI architecture before moving to a framework.
+
+### **React**
+
+As the portfolio keeps growing with more OS-like features — such as minimized windows in the taskbar, taskbar handlers, music controls, richer window management, and shutdown animations — a transition to **React** and **TypeScript** is planned in the near future.
+
+**Why React?**
+
+A component-based architecture will make the project easier to scale and maintain as the interface becomes more interactive and state-driven.
+
+It will help structure features such as:
+
+- desktop icons
+- windows
+- taskbar items
+- start menu behavior
+- audio controls
+- global UI state (open, closed, minimized, focused, active)
+
+**Why TypeScript?**
+
+TypeScript will improve reliability as the codebase grows by making state, events, and component contracts more explicit.
+
+It should help reduce bugs and make complex interactions easier to maintain, especially for:
+
+- window state management
+- drag / clamp logic
+- taskbar synchronization
+- reusable UI components
+- future refactors
+
+### Migration approach
+
+The transition is intended to be progressive, not a full rewrite at once.
+
+The goal is to keep the current visual identity and Win98-inspired design while improving:
+
+- scalability
+- maintainability
+- code organization
+- long-term feature development
+
+The custom styling approach will remain important, since this project relies heavily on a specific visual system rather than a generic UI framework.
 
 ---
 
@@ -132,6 +174,9 @@ npx http-server ./public -p 8080
 
 - Desktop shortcuts open windows (`data-open` → `#win-id`)
 - Windows can be opened/closed
+- Windows are draggable from the title bar (Pointer Events based)
+- Drag position is calculated relative to the desktop container, not the viewport, so movement stays aligned with the Win98 “desktop” area
+- Dragging is clamped to the desktop bounds to prevent windows from being moved completely off-screen
 - Close button:
   - adds `.is-closed`
   - sets `hidden` to remove from layout
@@ -230,6 +275,26 @@ I still remained the actor of my project, keeping full control over decisions an
 ## <ins>FAQ</ins>
 
 ### Host
+
+**Why Cloudflare Pages?**
+
+- the project is static-first, it is essentially an “app shell” served as static files (HTML/CSS/JS + assets, including Three.js scenes) and Cloudflare Pages is designed for exactly that: fast static delivery with minimal operational overhead.
+- Git-based deployments fit the workflow, updates are pushed through a repository, producing consistent, repeatable deployments (and easy rollbacks if needed).
+- great performance by default, Pages serves content through Cloudflare’s network, which is ideal for asset-heavy front-ends (images, fonts, JS bundles, Three.js resources).
+- clean multi-site / subdomain strategy, separate sites like authelinflorian.dev, cv.authelinflorian.dev, and lab.authelinflorian.dev map naturally to separate Pages projects (clear boundaries, easier maintenance, reduced blast radius).
+- security features without server management, HTTPS is handled automatically, and hardening can be expressed at the edge via \_headers (CSP, X-Content-Type-Options, Permissions-Policy, etc.).
+
+**Why not traditional web hosting (shared hosting)**
+
+- shared hosting solves problems the portfolio doesn’t have which is PHP/MySQL/email hosting and server-side stacks, a static portfolio doesn’t benefit from paying for those capabilities.
+- operational friction is higher, FTP workflows, server-side configuration quirks, and “hosting panel” constraints add complexity without real upside for a static site.
+- scaling and performance are less predictable, shared resources and opaque limits can become annoying even for small sites, while Pages’ static delivery remains stable.
+
+**Why not a VPS**
+
+- a VPS is only justified if the project needs a real server, my portfolio doesn’t require always-on processes, background jobs, websockets, or a custom runtime.
+- security/maintenance cost is disproportionate, a VPS requires hardening (SSH, firewall), OS patching, monitoring, backups, and incident handling.
+- ihgher failure surface, misconfigurations, outdated packages, and exposed services are common causes of compromise - keeping the portfolio static minimizes the attack surface.
 
 ---
 

@@ -53,5 +53,5 @@ localTime();
 
 /* Drag */
 
-bringToFrontt();
+bringToFront();
 makeWindowDraggable();

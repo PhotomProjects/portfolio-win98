@@ -213,6 +213,17 @@ export function makeWindowDraggable(windowElement, desktopArea) {
         The principle remains the same:
             first, the inner argument is calculated
             then, the outer function is calculated
+        Example:
+        In: Math.max(min, Math.min(value, max)), JavaScript evaluates firstly the most indented call, so: Math.min(value, max) then it passes the result for: Math.max(min, résultat)
+        Math.max(0, Math.min(120, 100))
+        Step 1, we calculate first: Math.min(120, 100)
+        Result: 100
+        Step 2, Math.max(0, 100)
+        Result: 100
+        Math.max(min, Math.min(value, max))
+        This is read as:
+            take the smaller of the values ​​between value and max
+            then make sure that this result is not smaller than min
         */
 
         windowElement.style.left = `${clampedLeft}px`;
