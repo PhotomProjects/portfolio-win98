@@ -341,53 +341,40 @@
     margin: 32px auto 0;
 }
 
-@media (max-width: 539px) {
+@media (max-width: 539px), (max-height: 539px) and (orientation: landscape) and (hover: none) and (pointer: coarse) {
     :root {
         --taskbar-h: 0px;
     }
 
-    #desktop div.window.window-mobile {
+    main#desktop #window-frame div.window.window-mobile:not([hidden]):not(.is-closed) {
         position: fixed;
         inset: 0;
         width: auto;
         height: auto;
+        max-height: none;
     }
 
-    #desktop div.window.window-mobile .window-content {
+    main#desktop #window-frame div.window.window-mobile .window-content {
         text-align: center;
     }
 
-    #desktop div.window.window-mobile .window-content img {
-        width: 128px;
+    main#desktop #window-frame div.window.window-mobile .window-content img {
+        width: 96px;
         height: auto;
-        margin-top: 32px;
+        margin-top: 16px;
     }
 
-    main#desktop #window-frame div.window.window-nojs-alert {
-        display: none;
-    }
-
-    main#desktop #window-frame div.window.window-home {
-        display: none;
-    }
-
-    main#desktop #window-frame div.window.window-help-menu {
-        display: none;
-    }
-
-    main#desktop #window-frame div.window.window-projects {
-        display: none;
-    }
-    
-    main#desktop #window-frame div.window.window-contact {
-        display: none;
-    }
-    
-    main#desktop #window-frame div.window.window-language-switcher {
-        display: none;
-    }
-
+    main#desktop #window-frame div.window.window-nojs-alert,
+    main#desktop #window-frame div.window.window-home,
+    main#desktop #window-frame div.window.window-help-menu,
+    main#desktop #window-frame div.window.window-projects,
+    main#desktop #window-frame div.window.window-contact,
+    main#desktop #window-frame div.window.window-language-switcher,
     main#desktop #window-frame div.window.window-tablet-alert {
+        display: none;
+    }
+
+    main#desktop nav.desktop-icons {
         display: none;
     }
 
@@ -396,13 +383,13 @@
     }
 }
 
-@media (min-width: 540px) and (max-width: 991px) {
+@media (min-width: 540px) and (max-width: 991px) and (min-height: 540px) {
     main#desktop #window-frame div.window.window-mobile {
         display: none;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 540px) {
     main#desktop #window-frame div.window.window-tablet-alert {
         display: none;
     }

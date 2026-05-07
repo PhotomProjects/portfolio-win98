@@ -432,7 +432,7 @@ button#local-time:focus-visible::after {
     content: attr(data-tooltip);
 }
 
-@media (min-width: 540px) and (max-width: 991px) {
+@media (min-width: 540px) and (max-width: 991px) and (min-height: 540px) {
     #desktop div.window-tablet-alert {
         height: fit-content;
         z-index: 2000;
