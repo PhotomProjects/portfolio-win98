@@ -304,6 +304,43 @@
     clear: both;
 }
 
+.lab-page {
+    position: relative;
+    min-height: 100vh;
+    background-color: #008080;
+}
+
+.lab-page #window-frame {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    pointer-events: none;
+}
+
+.lab-page #window-frame .window-lab {
+    position: static;
+    width: min(420px, 100%);
+    pointer-events: auto;
+}
+
+.lab-page #window-frame .window-lab .titlebar {
+    cursor:no-drop;
+}
+
+.lab-page #window-frame .window-lab .window-content a {
+    display: block;
+    text-align: center;
+}
+
+.lab-page #window-frame .window-lab .window-content img {
+    display: block;
+    width: 96px;
+    height: auto;
+    margin: 32px auto 0;
+}
+
 @media (max-width: 539px) {
     :root {
         --taskbar-h: 0px;
@@ -397,5 +434,5 @@
     .window-language-switcher {
         top: 500px;
         left: 120px;
-}
+    }
 }
