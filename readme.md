@@ -156,7 +156,7 @@ public/
 
 ---
 
-## Local development
+## <ins>Local development</ins>
 
 Because i18n uses `fetch("/i18n/...")`, I needed a local HTTP server (opening `index.html` directly won’t fully work).
 
