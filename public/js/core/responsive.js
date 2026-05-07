@@ -1,7 +1,7 @@
 /* Tablet mode */
 
 export const tabletMQ = window.matchMedia("(min-width: 540px) and (max-width: 991px) and (min-height: 540px)");
-export const mobileMQ = window.matchMedia("(max-width: 539px), (max-height: 539px) and (orientation: landscape) and (hover: none) and (pointer: coarse)");
+export const mobileMQ = window.matchMedia("(max-width: 539px), (max-width: 1199px) and (max-height: 539px) and (orientation: landscape)");
 
 export function initTabletModeClass() {
     const applyTabletMode = () =>

@@ -341,12 +341,17 @@
     margin: 32px auto 0;
 }
 
-@media (max-width: 539px), (max-height: 539px) and (orientation: landscape) and (hover: none) and (pointer: coarse) {
+main#desktop #window-frame div.window.window-mobile {
+    display: none;
+}
+
+@media (max-width: 539px), (max-width: 1199px) and (max-height: 539px) and (orientation: landscape) {
     :root {
         --taskbar-h: 0px;
     }
 
     main#desktop #window-frame div.window.window-mobile:not([hidden]):not(.is-closed) {
+        display: flex;
         position: fixed;
         inset: 0;
         width: auto;
@@ -383,18 +388,8 @@
     }
 }
 
-@media (min-width: 540px) and (max-width: 991px) and (min-height: 540px) {
-    main#desktop #window-frame div.window.window-mobile {
-        display: none;
-    }
-}
-
-@media (min-width: 992px) and (min-height: 540px) {
+@media (min-width: 992px) and (min-height: 540px), (min-width: 1200px) and (orientation: landscape) {
     main#desktop #window-frame div.window.window-tablet-alert {
-        display: none;
-    }
-
-    main#desktop #window-frame div.window.window-mobile {
         display: none;
     }
 
