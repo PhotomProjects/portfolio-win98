@@ -25,10 +25,16 @@ export function setLanguage() {
 
 export function resumeURL(languageCode) {
     const cvBase = "https://cv.authelinflorian.dev";
-    const cvUrl =
-        languageCode === "fr" ? `${cvBase}/lang/fr/` :
-        languageCode === "ja" ? `${cvBase}/lang/jp/` :
-        `${cvBase}/`;
+
+    const localeMap = {
+        fr: "fr",
+        en: "en",
+        ja: "ja",
+        jp: "ja"
+    };
+
+    const normalizedLang = localeMap[languageCode] || "en";
+    const cvUrl = `${cvBase}/${normalizedLang}/cv/designer/`;
 
     document.querySelectorAll("a.open-cv").forEach((link) => {
         link.href = cvUrl;
