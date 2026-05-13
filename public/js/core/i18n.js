@@ -4,7 +4,9 @@
 
 export function setLanguage() {
     /* Getting language (localStorage -> browser -> <html lang> -> "en" fallback) */
-    let languageCode = localStorage.getItem("lang");
+    const params = new URLSearchParams(window.location.search);
+    let languageCode = params.get("lang");
+    if (!languageCode) languageCode = localStorage.getItem("lang");
     if (!languageCode) languageCode = navigator.language;
     if (!languageCode) languageCode = document.documentElement.lang;
     if (!languageCode) languageCode = "en";
@@ -15,6 +17,9 @@ export function setLanguage() {
     if (languageCode.startsWith("fr")) languageCode = "fr";
     else if (languageCode.startsWith("ja")) languageCode = "ja";
     else languageCode = "en";
+
+     /* Save for future portfolio visits */
+    localStorage.setItem("lang", languageCode);
 
     /* Applying language to HTML (useful for accessibility and getLocale) */
     document.documentElement.lang = languageCode;
