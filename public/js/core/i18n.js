@@ -39,7 +39,7 @@ export function resumeURL(languageCode) {
     };
 
     const normalizedLang = localeMap[languageCode] || "en";
-    const cvUrl = `${cvBase}/${normalizedLang}/cv/designer/`;
+    const cvUrl = `${cvBase}/${normalizedLang}/cv/`;
 
     document.querySelectorAll("a.open-cv").forEach((link) => {
         link.href = cvUrl;
