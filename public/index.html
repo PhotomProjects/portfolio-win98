@@ -248,7 +248,7 @@
                 <div class="window-content">
                     <h3 data-i18n="h3.contactHeading">Contact me</h3>
                     <p data-i18n="p.contactText">If you wish to send me a message, please fill the form below.</p>
-                    <form action="mailto:photomprojects@gmail.com" method="get" enctype="text/plain">
+                    <form id="contact-form">
                         <label for="firstname" data-i18n="label.firstname">Firstname</label>
                         <input type="text" id="firstname" name="firstname" placeholder="Firstname" data-i18n="input.placeholderFirstname" data-i18n-attr="placeholder" required>
                         <label for="lastname" data-i18n="label.lastname">Lastname</label>
@@ -257,7 +257,7 @@
                         <input type="email" id="email" name="email" placeholder="Email" data-i18n="input.placeholderEmail" data-i18n-attr="placeholder" required>
                         <label for="message" data-i18n="label.message">Your message</label>
                         <textarea name="message" id="message" placeholder="Type your message here..." data-i18n="input.textareaPlaceholder" data-i18n-attr="placeholder" rows="10" required></textarea>
-                        <button type="submit" data-i18n="btn.send">Send</button>
+                        <button type="submit" data-i18n="btn.send" disabled>Send</button>
                     </form>
                 </div>
             </div>

@@ -223,8 +223,8 @@ main#desktop {
 }
 
 #window-frame .window .titlebar .title img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 }
 
 #window-frame .window .titlebar .controls {
