@@ -3,8 +3,7 @@
 const helpBtn = document.querySelector("#taskbar .help-area .taskbar-btn");
 const helpWin = document.getElementById("win-help-menu");
 
-export function initHelp({tabletMQ}) {
-
+export function initHelp({ tabletMQ, bootTime }) {
     document.addEventListener("DOMContentLoaded", () => {
         if (!helpWin) return;
 
@@ -14,8 +13,7 @@ export function initHelp({tabletMQ}) {
             return;
         }
 
-        const BOOT_TIME = 3100;
-        const SHOW_DELAY = BOOT_TIME + 200;
+        const SHOW_DELAY = bootTime + 200;
         const AUTO_CLOSE_AFTER = 15000;
 
         // Open help

@@ -6,8 +6,6 @@ import { tabletMQ, initTabletModeClass, initMobileCloseButtonState } from "./cor
 import { toggleStartMenu, closeOnOutsideClick, closeOnEscKey, itemStartMenu, localTime } from "./core/taskbar.js";
 import { deskIconsWindow, closeBtn } from "./core/windows.js";
 
-/* Lang */
-
 /* i18n */
 
 const lang = setLanguage();
@@ -19,7 +17,8 @@ languageBtn();
 
 /* Boot system */
 
-bootStart();
+const BOOT_TIME = 1000;
+bootStart(BOOT_TIME);
 
 /* Desktop */
 
@@ -46,7 +45,7 @@ itemStartMenu();
 
 /* Help */
 
-initHelp({ tabletMQ });
+initHelp({ tabletMQ, bootTime: BOOT_TIME });
 toggleHelpMenu();
 
 /* Local time */
