@@ -174,7 +174,7 @@
 
 .window-language-switcher .window-content ul li button img {
     width: 48px;
-    height: 24px;
+    height: auto;
     opacity: 70%;
 }
 
@@ -288,7 +288,7 @@
 
 .window-help-menu .window-content .clippy-float img {
     width: 64px;
-    height: 64px;
+    height: auto;
 }
 
 .window-help-menu .window-content .clippy-float p {

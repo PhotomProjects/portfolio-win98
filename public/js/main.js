@@ -12,7 +12,9 @@ import { deskIconsWindow, closeBtn } from "./core/windows.js";
 
 const lang = setLanguage();
 resumeURL(lang);
-translationJSON(lang);
+if (lang !== "en") {
+    translationJSON(lang);
+}
 languageBtn();
 
 /* Boot system */

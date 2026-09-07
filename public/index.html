@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Win98-themed portfolio of Florian AUTHELIN: web projects, contact/appointment and resume.">
     <link rel="icon" href="/assets/icons/win98-window-favicon.png">
+    <link rel="preload" href="/assets/fonts/MSW98UI-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/win98.css">
     <link rel="stylesheet" href="/css/app.css">
     <noscript><link rel="stylesheet" href="/css/nojs.css"></noscript>
     <link rel="canonical" href="https://authelinflorian.dev/">
+    <link rel="modulepreload" href="/js/apps/help.js">
+    <link rel="modulepreload" href="/js/apps/home.js">
+    <link rel="modulepreload" href="/js/core/drag.js">
+    <link rel="modulepreload" href="/js/core/i18n.js">
+    <link rel="modulepreload" href="/js/core/responsive.js">
+    <link rel="modulepreload" href="/js/core/taskbar.js">
+    <link rel="modulepreload" href="/js/core/windows.js">
     <script type="module" src="/js/main.js"></script>
     <title>Florian AUTHELIN | Portfolio</title>
 </head>
@@ -27,43 +35,43 @@
         <ul>
             <li>
                 <button class="desktop-icon" type="button" data-open="win-home" aria-controls="win-home" data-i18n="btn.desktopHomeShortcut" data-i18n-attr="aria-label" aria-label="Open Home window">
-                    <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true" width="48" height="48">
                     <span data-i18n="span.desktopHomeShortcut">Home</span>
                 </button>
             </li>
             <li>
                 <button class="desktop-icon" type="button" data-open="win-projects" aria-controls="win-projects" data-i18n="btn.desktopProjectsShortcut" data-i18n-attr="aria-label" aria-label="Open Projects window">
-                    <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true" width="48" height="48">
                     <span data-i18n="span.desktopProjectsShortcut">Projects</span>
                 </button>
             </li>
             <li>
                 <a class="desktop-icon" href="/lab/index.html" target="_blank" rel="noopener noreferrer" data-i18n="btn.desktopLabShortcut" data-i18n-attr="aria-label" aria-label="Open Laboratory in a new tab">
-                    <img src="/assets/icons/desktop/lab.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/lab.webp" alt="" aria-hidden="true" width="48" height="48">
                     <span data-i18n="span.desktopLabShortcut">Laboratory</span>
                 </a>
             </li>
             <li>
                 <button class="desktop-icon" type="button" data-open="win-contact" aria-controls="win-contact" data-i18n="btn.desktopContactShortcut" data-i18n-attr="aria-label" aria-label="Open Contact window">
-                    <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true" width="48" height="48">
                     <span data-i18n="span.desktopContactShortcut">Contact</span>
                 </button>
             </li>
             <li>
                 <a class="desktop-icon" href="https://calendar.app.google/XwiEn5YamGWjTNMV9" target="_blank" rel="noopener noreferrer" data-i18n="btn.desktopAppointmentShortcut" data-i18n-attr="aria-label" aria-label="Book an appointment in a new tab">
-                    <img src="/assets/icons/desktop/appointment.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/appointment.webp" alt="" aria-hidden="true" width="48" height="48">
                     <span data-i18n="span.desktopAppointmentShortcut">Appointment</span>
                 </a>
             </li>
             <li>
                 <a class="desktop-icon open-cv" href="https://cv.authelinflorian.dev" target="_blank" rel="noopener noreferrer" data-i18n="btn.desktopResumeShortcut" data-i18n-attr="aria-label" aria-label="Open resume in a new tab">
-                    <img src="/assets/icons/desktop/resume.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/resume.webp" alt="" aria-hidden="true" width="48" height="48">
                     <span data-i18n="span.desktopResumeShortcut">Resume</span>
                 </a>
             </li>
             <li>
                 <button class="desktop-icon" type="button" data-open="win-language-switcher" aria-controls="win-language-switcher" data-i18n="btn.desktopLanguageShortcut" data-i18n-attr="aria-label" aria-label="Open Language window">
-                    <img src="/assets/icons/desktop/language-switcher.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/language-switcher.webp" alt="" aria-hidden="true" width="48" height="48">
                     <span data-i18n="span.desktopLanguageShortcut">Language</span>
                 </button>
             </li>
@@ -74,18 +82,18 @@
             <div class="window window-mobile" id="win-mobile">
                 <div class="titlebar">
                     <div class="title">
-                        <img src="/assets/icons/desktop/smartphone.webp" alt="" aria-hidden="true">
+                        <img src="/assets/icons/desktop/smartphone.webp" alt="" aria-hidden="true" width="612" height="612">
                         <span data-i18n="span.winMobileTitleBar">Mobile</span>
                     </div>
                     <div class="controls">
                         <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-mobile" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
+                            <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-mobile" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
+                            <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-mobile">
-                            <img src="/assets/icons/window/close.webp" alt="">
+                            <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                         </button>
                     </div>
                 </div>
@@ -93,7 +101,7 @@
                 <div class="window-content">
                     <h3 data-i18n="h3.mobileHeading">Under construction</h3>
                     <p data-i18n="p.messageWIP">The mobile version is still under development, please come back later!</p>
-                    <img src="/assets/icons/desktop/clippy-mobile.webp" alt="" aria-hidden="true">
+                    <img src="/assets/icons/desktop/clippy-mobile.webp" alt="" aria-hidden="true" width="360" height="447">
                 </div>
             </div>
 
@@ -101,18 +109,18 @@
                 <div class="window window-nojs-alert" id="win-nojs-alert">
                     <div class="titlebar">
                         <div class="title">
-                            <img src="/assets/icons/desktop/nojs.webp" alt="" aria-hidden="true">
+                            <img src="/assets/icons/desktop/nojs.webp" alt="" aria-hidden="true" width="600" height="600">
                             <span>Alert</span>
                         </div>
                         <div class="controls">
                             <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-nojs-alert" disabled>
-                                <img src="/assets/icons/window/minimize.webp" alt="">
+                                <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                             </button>
                             <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-nojs-alert" disabled>
-                                <img src="/assets/icons/window/maximize.webp" alt="">
+                                <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                             </button>
                             <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-nojs-alert">
-                                <img src="/assets/icons/window/close.webp" alt="">
+                                <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                             </button>
                         </div>
                     </div>    
@@ -121,8 +129,8 @@
                         <div class="nojs-banner">
                             <p>This message is for the users who are visiting the website with JavaScript deactivated. To fully enjoy the experience, please activate JavaScript.</p>
                             <p>Features like the taskbar, the hour system, the Start Menu, the language switcher, the help menu or the contact form are disabled, you can still contact me on GitHub or LinkedIn.</p>
-                            <a href="https://github.com/PhotomProjects"><img src="/assets/icons/taskbar/github.webp" alt="" aria-hidden="true"></a>
-                            <a href="https://www.linkedin.com/in/florianauthelin57/"><img src="/assets/icons/taskbar/linkedin.webp" alt="" aria-hidden="true"></a>
+                            <a href="https://github.com/PhotomProjects"><img src="/assets/icons/taskbar/github.webp" alt="" aria-hidden="true" width="16" height="16"></a>
+                            <a href="https://www.linkedin.com/in/florianauthelin57/"><img src="/assets/icons/taskbar/linkedin.webp" alt="" aria-hidden="true" width="16" height="16"></a>
                         </div>
                     </div>
                 </div>
@@ -131,18 +139,18 @@
             <div class="window window-tablet-alert" id="win-tablet-alert">
                 <div class="titlebar">
                     <div class="title">
-                        <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                        <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true" width="48" height="48">
                         <span data-i18n="span.winAlertTitleBar">Alert</span>
                     </div>
                     <div class="controls">
                         <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-tablet-alert" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
+                            <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-tablet-alert" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
+                            <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-tablet-alert">
-                            <img src="/assets/icons/window/close.webp" alt="">
+                            <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                         </button>
                     </div>
                 </div>
@@ -161,18 +169,18 @@
             <div class="window window-home" id="win-home" data-draggable="true">
                 <div class="titlebar">
                     <div class="title">
-                        <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                        <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true" width="16" height="16">
                         <span data-i18n="span.winHomeTitleBar">Home</span>
                     </div>
                     <div class="controls">
                         <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-home" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
+                            <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-home" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
+                            <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-home">
-                            <img src="/assets/icons/window/close.webp" alt="">
+                            <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                         </button>
                     </div>
                 </div>
@@ -199,7 +207,7 @@
                         <p data-i18n="p.homeTextTutorial">To give you a quick explanation of how this works, there is a desktop in the background with different icons. Clicking an icon will open a window or redirect you to the corresponding page</p>
                         <p>
                             <span data-i18n="span.homeTextHelp.before">I'll show this only once, but you can always come back to this help menu by clicking the small yellow question mark located</span>
-                            (<img src="/assets/icons/taskbar/help.webp" alt="" class="bounce">)
+                            (<img src="/assets/icons/taskbar/help.webp" alt="" class="bounce" width="16" height="16">)
                             <span data-i18n="span.homeTextHelp.after">in the taskbar.</span>
                         </p>
                         <p data-i18n="p.homeTextContact">If you wish to contact me, you can send me a message by clicking on the Contact icon on the desktop or in the start menu and fill out the form. If you prefer to book a call, you can do so by clicking on the Appointment icon. It'll redirect you to a Google Calendar page.
@@ -221,18 +229,18 @@
             <div class="window window-contact" id="win-contact" data-draggable="true" hidden>
                 <div class="titlebar">
                     <div class="title">
-                        <img src="/assets/icons/desktop/contact.webp" alt="">
+                        <img src="/assets/icons/desktop/contact.webp" alt="" width="48" height="48">
                         <span data-i18n="span.winContactTitleBar">Contact</span>
                     </div>
                     <div class="controls">
                         <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-contact" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
+                            <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-contact" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
+                            <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-contact">
-                            <img src="/assets/icons/window/close.webp" alt="">
+                            <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                         </button>
                     </div>
                 </div>
@@ -257,18 +265,18 @@
             <div class="window window-projects" id="win-projects" data-draggable="true" hidden>
                 <div class="titlebar">
                     <div class="title">
-                        <img src="/assets/icons/desktop/projects.webp" alt="">
+                        <img src="/assets/icons/desktop/projects.webp" alt="" width="48" height="48">
                         <span data-i18n="span.winProjectsTitleBar">Projects</span>
                     </div>
                     <div class="controls">
                         <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-projects" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
+                            <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-projects" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
+                            <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-projects">
-                            <img src="/assets/icons/window/close.webp" alt="">
+                            <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                         </button>
                     </div>
                 </div>
@@ -293,18 +301,18 @@
             <div class="window window-language-switcher" id="win-language-switcher" data-draggable="true" hidden>
                 <div class="titlebar">
                     <div class="title">
-                        <img src="/assets/icons/desktop/language-switcher.webp" alt="">
+                        <img src="/assets/icons/desktop/language-switcher.webp" alt="" width="48" height="48">
                         <span data-i18n="span.winLanguageSwitcherTitleBar">Language</span>
                     </div>
                     <div class="controls">
                         <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-language-switcher" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
+                            <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-language-switcher" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
+                            <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-language-switcher">
-                            <img src="/assets/icons/window/close.webp" alt="">
+                            <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                         </button>
                     </div>
                 </div>
@@ -315,19 +323,19 @@
                     <ul>
                         <li>
                             <button type="button" data-lang="fr" data-i18n="btn.langFR" data-i18n-attr="aria-label" aria-label="Français">
-                                 <img src="/assets/images/language-switcher-window/france.webp" alt="">
+                                 <img src="/assets/images/language-switcher-window/france.webp" alt="" width="32" height="18">
                             </button>
                             <p>FR</p>
                         </li>
                         <li>
                             <button type="button" data-lang="en" data-i18n="btn.langEN" data-i18n-attr="aria-label" aria-label="English">
-                                <img src="/assets/images/language-switcher-window/united-states.webp" alt="">
+                                <img src="/assets/images/language-switcher-window/united-states.webp" alt="" width="32" height="18">
                             </button>
                             <p>EN</p>
                         </li>
                         <li>
                             <button type="button" data-lang="ja" data-i18n="btn.langJA" data-i18n-attr="aria-label" aria-label="日本語">
-                                <img src="/assets/images/language-switcher-window/japan.webp" alt="">
+                                <img src="/assets/images/language-switcher-window/japan.webp" alt="" width="32" height="18">
                             </button>
                             <p>JP</p>
                         </li>
@@ -342,25 +350,25 @@
                     </div>
                     <div class="start-menu-main">
                         <button class="start-menu-item" type="button" data-open="win-home" data-i18n="btn.homeStartMenu" data-i18n-attr="aria-label" aria-label="Home" aria-controls="win-home">
-                            <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                            <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true" width="48" height="48">
                             <span data-i18n="span.winHomeStartMenu">Home</span>
                         </button>
                         <button class="start-menu-item" type="button" data-open="win-projects" data-i18n="btn.projectsStartMenu" data-i18n-attr="aria-label" aria-label="Projects" aria-controls="win-projects">
-                            <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true">
+                            <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true" width="48" height="48">
                             <span data-i18n="span.winProjectsStartMenu">Projects</span>
                         </button>
                         <button class="start-menu-item" type="button" data-open="win-contact" data-i18n="btn.contactStartMenu" data-i18n-attr="aria-label" aria-label="Contact" aria-controls="win-contact">
-                            <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true">
+                            <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true" width="48" height="48">
                             <span data-i18n="span.winContactStartMenu">Contact</span>
                         </button>
                         <div class="separator"></div>
                         <button class="start-menu-item" type="button" data-open="win-help-menu" data-i18n="btn.helpStartMenu" data-i18n-attr="aria-label" aria-label="Help" aria-controls="win-help-menu">
-                            <img src="/assets/icons/taskbar/help.webp" alt="" aria-hidden="true">
+                            <img src="/assets/icons/taskbar/help.webp" alt="" aria-hidden="true" width="16" height="16">
                             <span data-i18n="span.winHelpStartMenu">Help</span>
                         </button>
                        <div class="separator"></div>
                         <button id="shutdown" class="start-menu-item" type="button" data-i18n="btn.shutdownStartMenu" data-i18n-attr="aria-label" aria-label="Shut Down">
-                            <img src="/assets/icons/taskbar/shut-down.webp" alt="" aria-hidden="true">
+                            <img src="/assets/icons/taskbar/shut-down.webp" alt="" aria-hidden="true" width="48" height="48">
                             <span data-i18n="span.winShutdownStartMenu">Shut Down</span>
                         </button>
                     </div>
@@ -370,18 +378,18 @@
             <div class="window window-help-menu" id="win-help-menu" data-draggable="true" hidden>
                 <div class="titlebar">
                     <div class="title">
-                        <img src="/assets/icons/taskbar/help.webp" alt="">
+                        <img src="/assets/icons/taskbar/help.webp" alt="" width="16" height="16">
                         <span data-i18n="span.winHelpTitleBar">Help</span>
                     </div>
                     <div class="controls">
                         <button type="button" data-i18n="btn.winControlMinimize" data-i18n-attr="aria-label" aria-label="Minimize window" aria-controls="win-help-menu" disabled>
-                            <img src="/assets/icons/window/minimize.webp" alt="">
+                            <img src="/assets/icons/window/minimize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlMaximize" data-i18n-attr="aria-label" aria-label="Maximize window" aria-controls="win-help-menu" disabled>
-                            <img src="/assets/icons/window/maximize.webp" alt="">
+                            <img src="/assets/icons/window/maximize.webp" alt="" width="17" height="15">
                         </button>
                         <button type="button" data-i18n="btn.winControlClose" data-action="close" data-i18n-attr="aria-label" aria-label="Close window" aria-controls="win-help-menu">
-                            <img src="/assets/icons/window/close.webp" alt="">
+                            <img src="/assets/icons/window/close.webp" alt="" width="17" height="15">
                         </button>
                     </div>
                 </div>
@@ -402,49 +410,49 @@
                     <tbody>
                         <tr>
                             <th scope="row">
-                                <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true">
+                                <img src="/assets/icons/desktop/home.webp" alt="" aria-hidden="true" width="48" height="48">
                                 <span class="sr-only" data-i18n="span.thHome">Desktop</span>
                             </th>
                             <td data-i18n="td.homeIcon">This is the Home icon. It allows you to go back on the main page.</td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true">
+                                <img src="/assets/icons/desktop/projects.webp" alt="" aria-hidden="true" width="48" height="48">
                                 <span class="sr-only" data-i18n="span.thProjects">Projects</span>
                             </th>
                             <td data-i18n="td.projectsIcon">This is the Projects icon. It contains a presentation of all of my projects.</td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <img src="/assets/icons/desktop/lab.webp" alt="" aria-hidden="true">
+                                <img src="/assets/icons/desktop/lab.webp" alt="" aria-hidden="true" width="48" height="48">
                                 <span class="sr-only" data-i18n="span.thLab">Laboratory</span>
                             </th>
                             <td data-i18n="td.labIcon">This is the Laboratory icon. It redirects to my Three.js experiments</td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true">
+                                <img src="/assets/icons/desktop/contact.webp" alt="" aria-hidden="true" width="48" height="48">
                                 <span class=" sr-only" data-i18n="span.thContact">Contact</span>
                             </th>
                             <td data-i18n="td.contactIcon">This is the Contact icon. It has a contact form that you can use to send a message to Mr. AUTHELIN Florian.</td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <img src="/assets/icons/desktop/appointment.webp" alt="" aria-hidden="true">
+                                <img src="/assets/icons/desktop/appointment.webp" alt="" aria-hidden="true" width="48" height="48">
                                 <span class="sr-only" data-i18n="span.thAppointment">Appointment</span>
                             </th>
                             <td data-i18n="td.appointmentIcon">This is the Appointment icon. It redirects to a Google Calendar to book a call with Mr. AUTHELIN Florian.</td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <img src="/assets/icons/desktop/resume.webp" alt="" aria-hidden="true">
+                                <img src="/assets/icons/desktop/resume.webp" alt="" aria-hidden="true" width="48" height="48">
                                 <span class="sr-only" data-i18n="span.thResume">Resume</span>
                             </th>
                             <td data-i18n="td.resumeIcon">This is the Resume icon. It redirects to the resume page of Mr. AUTHELIN Florian.</td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <img src="/assets/icons/desktop/language-switcher.webp" alt="" aria-hidden="true">
+                                <img src="/assets/icons/desktop/language-switcher.webp" alt="" aria-hidden="true" width="48" height="48">
                                 <span class="sr-only" data-i18n="span.thLanguage">Language Switcher</span>
                             </th>
                             <td data-i18n="td.languageIcon">This is the Language icon. You can switch between English, French and Japanese.</td>
@@ -452,7 +460,7 @@
                     </tbody>
                     </table>
                     <div class="clippy-float">
-                        <img src="/assets/images/help-window/clippy.gif" alt="" class="clippy-float" data-i18n="img.clippyTitle" data-i18n-attr="title" title="Hello World!">
+                        <img src="/assets/images/help-window/clippy.webp" alt="" class="clippy-float" data-i18n="img.clippyTitle" data-i18n-attr="title" title="Hello World!" width="128" height="120">
                         <p>
                             <span data-i18n="span.helpText.before">I'll show only one time but you can always go back on this help menu by clicking on the little yellow interrogation mark situated</span>
                             (<img src="/assets/icons/taskbar/help.webp" alt="" class="bounce">)
@@ -468,14 +476,14 @@
     <nav id="taskbar" data-i18n="nav.taskbar" data-i18n-attr="aria-label" aria-label="Taskbar">
         <div id="win-startmenu" class="start-menu">
             <button type="button" data-i18n="btn.taskbarStart" data-i18n-attr="aria-label" aria-label="Start menu" aria-controls="win-start-menu" aria-expanded="false" class="taskbar-btn">
-                <img src="/assets/icons/taskbar/windows-start.webp" alt="" aria-hidden="true">
+                <img src="/assets/icons/taskbar/windows-start.webp" alt="" aria-hidden="true" width="16" height="16">
                 <p data-i18n="p.startMenuText">Start</p>
             </button>
         </div>
         <div class="handler"></div>
         <div class="help-area">
             <button type="button" data-i18n="btn.taskbarHelp" data-i18n-attr="aria-label" aria-label="How to navigate" aria-controls="win-help-menu" class="taskbar-btn">
-                <img src="/assets/icons/taskbar/help.webp" alt="" aria-hidden="true">
+                <img src="/assets/icons/taskbar/help.webp" alt="" aria-hidden="true" width="16" height="16">
             </button>
         </div>
         <div class="handler"></div>
@@ -483,17 +491,17 @@
             <ul>
                 <li>
                     <button type="button" data-i18n="btn.taskbarVolume" data-i18n-attr="aria-label" aria-label="Sound volume">
-                        <img src="/assets/icons/taskbar/sound-volume.webp" alt="" aria-hidden="true">
+                        <img src="/assets/icons/taskbar/sound-volume.webp" alt="" aria-hidden="true" width="16" height="16">
                     </button>
                 </li>
                 <li>
                     <a href="https://github.com/PhotomProjects" target="_blank" title="GitHub" data-i18n="a.github" data-i18n-attr="aria-label" aria-label="Visit my GitHub profile" rel="noopener noreferrer">
-                        <img src="/assets/icons/taskbar/github.webp" alt="" aria-hidden="true">
+                        <img src="/assets/icons/taskbar/github.webp" alt="" aria-hidden="true" width="16" height="16">
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/florianauthelin57/" target="_blank" title="LinkedIn" data-i18n="a.linkedin" data-i18n-attr="aria-label" aria-label="Visit my LinkedIn profile" rel="noopener noreferrer">
-                        <img src="/assets/icons/taskbar/linkedin.webp" alt="" aria-hidden="true">
+                        <img src="/assets/icons/taskbar/linkedin.webp" alt="" aria-hidden="true" width="16" height="16">
                     </a>
                 </li>
                 <li>
