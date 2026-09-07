@@ -1,0 +1,15 @@
+# Florian Authelin Portfolio
+
+> Portfolio of Florian Authelin, digital designer and web developer.
+
+This website presents selected web development, UI/UX design and visual design projects.
+
+## Main pages
+
+- [Portfolio](https://authelinflorian.dev/): Main portfolio and project showcase.
+- [Lab](https://authelinflorian.dev/lab/): Experimental and creative projects.
+
+## External resources
+
+- [GitHub](TON_URL_GITHUB): Development projects and source code.
+- [LinkedIn](TON_URL_LINKEDIN): Professional profile.
