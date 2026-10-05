@@ -1,5 +1,10 @@
 # Portfolio Win98
 
+> [!WARNING]
+> **Archived — old version**
+>
+> This project is no longer maintained. It is retained solely for historical reference.
+
 ---
 
 ## <ins>Disclaimer</ins>
